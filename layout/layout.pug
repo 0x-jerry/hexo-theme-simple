@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+html
+  //- head tag
+  include _partial/head
+  body
+    include _partial/menu
+    .container
+      include _partial/header
+      .row
+        .col-sm-8.blog-main
+          !=body
+        .col-sm-3.col-sm-offset-1.blog-sidebar
+          include _partial/sidebar
+    include _partial/footer
+    include _partial/after-footer
+

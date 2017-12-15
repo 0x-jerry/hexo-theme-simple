@@ -1,0 +1,6 @@
+.blog-categories-container
+  span.glyphicon.plyphicon-folder-open
+    if page.categories && page.categories.length
+      a(href=config.root+category.path) 
+        |/
+        = category.name

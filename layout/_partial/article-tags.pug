@@ -1,0 +1,6 @@
+.blog-tags-container
+  span.glyphicon.plyphicon-tags
+    if page.tags && page.tags.length
+      each tag in page.tags.data
+        a(href=config.root+tag.path) ##{tag.name}
+    

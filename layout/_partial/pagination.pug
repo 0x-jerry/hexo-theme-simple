@@ -1,0 +1,8 @@
+nav
+  ul.pager
+    if page.prev
+      li
+        a(href=config.root+page.prev_link) Previous
+    if page.next
+      li 
+        a(href=config.root+page.next_link) Next

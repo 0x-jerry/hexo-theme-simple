@@ -1,0 +1,10 @@
+.blog-post
+  h2.blog-post-title-archive
+    a(href=config.root+item.path)
+      = item.title || item.link
+  p.blog-post-meta
+    != item.date.format(config.date_format)
+    if item.author
+      | by
+      = item.author
+
