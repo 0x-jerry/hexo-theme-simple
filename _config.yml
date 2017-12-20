@@ -1,6 +1,12 @@
 menu:
   Home: /
   Archives: /archives
-  
+
+# SCSS
+node_sass:
+  outputStyle: nested
+  precision: 5
+  sourceComments: false
+
 # Read More text
 excerpt_link: Read More
