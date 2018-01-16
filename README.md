@@ -5,8 +5,15 @@
 1. 搭建 Hexo 环境
 2. 在 Hexo 根目录下运行命令 `git clone https://github.com/cwxyz007/hexo-simple-template.git themes/simple`
 3. 修改 Hexo 的 `_config.yml` 文件，把 `theme: landscape` 改成 `theme: simple `
+4. 安装 `hexo-render-pug` 和 `hexo-renderer-sass` 插件
 4. 运行 `hexo s`
 
+```bash
+hexo init
+git clone https://github.com/cwxyz007/hexo-simple-template.git themes/simple
+yarn add hexo-render-pug hexo-renderer-sass
+hexo
+```
 ## 文字阅读体验
 
 - 使用渐变，使上下文字渐变消失
