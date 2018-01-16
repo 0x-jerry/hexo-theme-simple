@@ -2,13 +2,6 @@
   "name": "simple",
   "version": "1.0.0",
   "description": "hexo template",
-  "main": "",
-  "scripts": {
-    "test": ""
-  },
   "author": "cwxyz",
-  "license": "MIT",
-  "dependencies": {
-    "hexo-render-pug": "^1.2.0"
-  }
+  "license": "MIT"
 }
