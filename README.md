@@ -12,7 +12,7 @@
 hexo init
 git clone https://github.com/cwxyz007/hexo-simple-template.git themes/simple
 yarn add hexo-render-pug hexo-renderer-sass
-hexo
+hexo s
 ```
 ## 文字阅读体验
 
