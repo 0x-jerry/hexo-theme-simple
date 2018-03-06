@@ -1,6 +1,23 @@
-$primary-color: #FC5136;
-$bg-color: #FFF7D6;
+$color-primary: #FC5136;
+$color-white: #FFF7D6;
+$color-gray: #3E3E3E;
+$color-lightyellow: #fddea5;
 
-body{
-  background-color: $bg-color;
+h1, h2, h3, h4, h5, h6, p {
+  color: $color-gray;
+}
+
+a{
+  color: $color-gray;
+  border: none;
+  text-decoration: transparent;
+
+  &:hover{
+    color: darken($color: $color-gray, $amount: 60);
+  }
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
 }

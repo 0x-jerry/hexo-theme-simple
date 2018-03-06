@@ -5,3 +5,16 @@ menu:
 
 # Read More text
 excerpt_link: Read More
+
+# links
+
+links:
+  github:
+    link: https://cwxyz007.github.io/
+    icon: github
+  email:
+    link: mailto:844067636@qq.com
+    icon: envelope
+  other:
+    link: mailto:844067636@qq.com
+    icon: envelope

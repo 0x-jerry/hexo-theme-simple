@@ -1,2 +1,20 @@
 @import 'global.scss';
 @import 'sidebar.scss';
+
+body{
+  background-color: $color-white;
+
+  .main-content {
+    width: 50%;
+    position: absolute;
+    padding-left: 5%;
+  }
+
+  .nav-content {
+    position: fixed;
+    left: 70%;
+    width: 20%;
+    height: 100vh;
+    background-color: $color-primary;
+  }
+}

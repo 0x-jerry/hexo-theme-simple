@@ -1,13 +1,21 @@
-.sidebar-module
-  include menu
-.sidebar-module.sidebar-module-inset
-  h4 About Me
-  p 
-    = config.description
-.sidebar-module
-  h4 Tags
-  ol.list-unstyled
-    each tag in site.tags.toArray()
-      li
-        a(href=config.root + tag.path)
-          = tag.name
+.nav
+  .avatar
+    img(src="holder.js/100x100", alt="", srcset="")
+  h2.author
+    = config.author
+  h3.subtitle
+    = config.subtitle
+
+  .nav-links
+    ul.links
+      each link, name in theme.links
+        li.link
+          a(href=link.link)
+            i.fa(class="fa-" + link.icon)
+            span= name
+
+  .nav-menu
+    ul.menus
+      each link, name in theme.menu
+        li.menu(class=name.toLowerCase())
+          a(href=url_for(link))= name
