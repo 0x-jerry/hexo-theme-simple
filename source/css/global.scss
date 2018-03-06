@@ -1,7 +1,6 @@
 $color-primary: #FC5136;
-$color-white: #FFF7D6;
+$color-lightyellow: #FFF7D6;
 $color-gray: #3E3E3E;
-$color-lightyellow: #fddea5;
 
 h1, h2, h3, h4, h5, h6, p {
   color: $color-gray;
@@ -20,4 +19,9 @@ a{
 ul {
   list-style: none;
   padding-left: 0;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
 }
