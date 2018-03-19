@@ -1,24 +1,30 @@
-$color-primary: #FC5136;
-$color-lightyellow: #FFF7D6;
-$color-gray: #3E3E3E;
+$color-primary: #fc5136;
+$color-lightyellow: #fff7d6;
+$color-gray: #3e3e3e;
 
-h1, h2, h3, h4, h5, h6, p {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
   color: $color-gray;
 }
 
-a{
+a {
   color: $color-gray;
-  border: none;
   text-decoration: transparent;
+  border: none;
 
-  &:hover{
+  &:hover {
     color: darken($color: $color-gray, $amount: 60);
   }
 }
 
 ul {
-  list-style: none;
   padding-left: 0;
+  list-style: none;
 }
 
 .container {

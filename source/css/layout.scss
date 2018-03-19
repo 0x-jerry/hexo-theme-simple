@@ -1,14 +1,14 @@
 @import 'global.scss';
 @import 'sidebar.scss';
 
-body{
+body {
   background-color: $color-lightyellow;
 
   .main-content {
     position: absolute;
     width: 70%;
 
-    .container{
+    .container {
       max-width: 768px;
     }
   }
@@ -20,10 +20,10 @@ body{
     width: 30%;
     height: 100vh;
 
-    .container{
-      padding-top: 1px;
+    .container {
       max-width: 256px;
       height: 100%;
+      padding-top: 1px;
       background-color: $color-primary;
     }
   }

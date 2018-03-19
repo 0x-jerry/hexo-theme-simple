@@ -2,35 +2,36 @@
   text-align: center;
 
   .avatar {
-    overflow: hidden;
-    border-radius: 50%;
     width: 100px;
     height: 100px;
     margin: 30px auto 0;
+    overflow: hidden;
+    border-radius: 50%;
   }
 
   .author {
-
+    text-emphasis: none;
   }
 
   .subtitle {
-
+    background-color: #fff;
   }
 
   .nav-links {
     .links {
       text-align: left;
-      
-      .link {
-        width: 50%;
-        display: inline-block;
 
-        a{
+      .link {
+        display: inline-block;
+        width: 50%;
+
+        a {
           i {
             margin-left: 24px;
             font-size: larger;
           }
-          span{
+
+          span {
             margin-left: 10px;
             text-transform: capitalize;
           }
@@ -40,20 +41,20 @@
   }
 
   .nav-menu {
-    .menus{
-      .menu{
-        &.active, &:hover{
+    .menus {
+      .menu {
+        &.active,
+        &:hover {
           background-color: $color-lightyellow;
         }
 
-        a{
+        a {
           display: block;
-          padding: 10px 0;
           width: 100%;
           height: 100%;
+          padding: 10px 0;
         }
       }
     }
-
   }
 }
