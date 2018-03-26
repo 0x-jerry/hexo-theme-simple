@@ -1,4 +1,4 @@
-- 
+-
   let title = ''
   if (page.category) title = page.category
   if (page.tag) title = page.tag
@@ -8,8 +8,16 @@
   }
 
 if title
-  h2.blog-archive-title
+  h2.simple-archive-title
     =title
 each item in page.posts.data
-  include _partial/article-archive
+  .simple-article-archive
+    h2.title
+      a(href=config.root+item.path)
+        = item.title || item.link
+    p.meta
+      != item.date.format(config.date_format)
+      if item.author
+        | by
+        = item.author
 include _partial/pagination

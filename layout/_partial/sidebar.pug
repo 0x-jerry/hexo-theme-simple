@@ -1,21 +1,22 @@
-.nav
+.simple-sidebar
   .avatar
     img(src="holder.js/100x100", alt="", srcset="")
+
   h2.author
     = config.author
   h3.subtitle
     = config.subtitle
 
-  .nav-links
-    ul.links
-      each link, name in theme.links
-        li.link
-          a(href=link.link target='_blank')
-            i.fa(class="fa-" + link.icon)
-            span= name
-
-  .nav-menu
-    ul.menus
-      each link, name in theme.menu
-        li.menu(class=name.toLowerCase())
-          a(href=url_for(link))= name
+  ul.links
+    each link, name in theme.links
+      li
+        a(href=link.link target='_blank')
+          i.fa(class="fa-" + link.icon)
+          span= name
+  .decoration-line
+  ul.menu
+    each value, name in theme.menu
+      li(class=name.toLowerCase())
+        a(href=url_for(value.path))
+          i.fa(class="fa-" + value.icon)
+          = name

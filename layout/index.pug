@@ -1,3 +1,15 @@
-each item in page.posts.data
-  include _partial/article-excerpt
-include _partial/pagination
+.simple-index
+  each item in page.posts.data
+    .artical-excerpt
+      h2.title
+        a(href=config.root+item.path) #{item.title}
+      p.meta
+        = item.date.format(config.date_format)
+        if item.author
+          | by #{item.author}
+      !=item.excerpt || item.content
+      if item.excerpt
+        p.more
+          a(href=config.root+item.path)
+            = theme.excerpt_link
+  include _partial/pagination

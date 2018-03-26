@@ -1,5 +1,6 @@
-.blog-header
-  h1.blog-title #{config.title}
-  p.lead.blog-description
+.simple-header
+  h1.title
+    = config.title
+  p.description
     if config.subtitle 
-      |#{config.subtitle}
+      = config.subtitle

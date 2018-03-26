@@ -1,2 +1,12 @@
-- let item = page
-include _partial/article-full
+.simple-artical
+  h2.title
+    = page.title || page.link
+  p.meta
+    = page.date.format(config.date_format)
+    if page.author
+      | by
+      = page.author
+  != page.content
+  br
+  include _partial/article-tags
+  include _partial/article-categories

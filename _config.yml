@@ -1,7 +1,11 @@
 # menu
 menu:
-  Home: /
-  Archives: /archives
+  Home:
+    path: /
+    icon: home
+  Archives: 
+    path: /archives
+    icon: archive
 
 # Read More text
 excerpt_link: Read More

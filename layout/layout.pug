@@ -2,12 +2,10 @@
 html
   include _partial/head
   body
-    .main-content
-      .container
-        !=body
-        include _partial/footer
-    .nav-content
-      .container
-        include _partial/sidebar
+    .simple-layout-nav
+      include _partial/sidebar
+    .simple-layout-content
+      !=body
+      include _partial/footer
 
     include _partial/after-footer
