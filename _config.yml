@@ -3,9 +3,12 @@ menu:
   Home:
     path: /
     icon: home
-  Archives: 
+  Archives:
     path: /archives
     icon: archive
+  Tags:
+    path: /tags
+    icon: tag
 
 # Read More text
 excerpt_link: Read More
