@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 html
   include _partial/head
+
   body
     .simple-layout-nav
       include _partial/sidebar
+
     .simple-layout-content
       !=body
       include _partial/footer
+
+    if page.title
+      #page-nav-bar
 
     include _partial/after-footer

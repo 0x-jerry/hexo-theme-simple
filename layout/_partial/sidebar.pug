@@ -1,11 +1,13 @@
-.simple-sidebar
-  .avatar
-    img(src="holder.js/100x100", alt="", srcset="")
+.simple-sidebar(class=`${page.title ? 'page' : ''}`)
+  .head
+    .avatar
+      img(src="holder.js/200x200", alt="", srcset="")
 
-  h2.author
-    = config.author
-  h3.subtitle
-    = config.subtitle
+    .info
+      h3.author
+        = config.author
+      h4.subtitle
+        = config.subtitle
 
   ul.links
     each link, name in theme.links
@@ -20,3 +22,4 @@
         a(href=url_for(value.path))
           i.fa(class="fa-" + value.icon)
           = name
+  .decoration-line

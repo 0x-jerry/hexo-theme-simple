@@ -3,24 +3,47 @@
 @import 'sidebar.scss';
 
 body {
-  position: relative;
-  margin: 0 auto;
+  display: flex;
   background-color: $color-lightyellow;
 
-  $nav-width: 270px;
+  $nav-width: 220px;
+  $page-nav-width: 200px;
 
   .simple-layout-content {
-    position: absolute;
-    left: $nav-width;
-    width: calc(100% - $nav-width);
-    padding: 20px 50px;
+    flex: 1;
+    height: 100vh;
+    padding: 0 50px;
+  }
+
+  #page-nav-bar {
+    flex: 0 0 $page-nav-width;
+    height: 100vh;
+    font-size: smaller;
+    transition: all 0.2s ease;
+
+    &.active {
+      width: $page-nav-width;
+    }
+
+    ul {
+      li {
+        &.h2 {
+          padding-left: 1em;
+        }
+
+        &.h3 {
+          padding-left: 2em;
+        }
+
+        &.h4 {
+          padding-left: 3em;
+        }
+      }
+    }
   }
 
   .simple-layout-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: $nav-width;
+    flex: 0 0 $nav-width;
     height: 100vh;
     border-right: 1px solid lighten($color: $color-primary, $amount: 30);
   }
