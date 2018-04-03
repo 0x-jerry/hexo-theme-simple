@@ -1,6 +1,7 @@
 $(window).ready(() => {
   const $content = $('#post-content')
   const $ul = $('<ul> </ul>')
+
   $content.find('h1,h2,h3,h4,h5,h6').each((index, ele) => {
     const $li = $('<li></li>')
     const $a = $('<a />')

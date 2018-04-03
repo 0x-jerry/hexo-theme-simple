@@ -1,13 +1,15 @@
 @import 'global.scss';
 @import 'index.scss';
 @import 'sidebar.scss';
+@import 'footer.scss';
 
 body {
   display: flex;
-  background-color: $color-lightyellow;
+  overflow: hidden;
+  background-color: $color-white;
 
   $nav-width: 220px;
-  $page-nav-width: 200px;
+  $page-nav-width: 260px;
 
   .simple-layout-content {
     flex: 1;
@@ -16,18 +18,29 @@ body {
   }
 
   #page-nav-bar {
-    flex: 0 0 0;
+    display: flex;
+    flex: 0;
+    justify-content: center;
     height: 100vh;
     font-size: smaller;
     border-left: 1px solid lighten($color: $color-primary, $amount: 30);
-    transition: all 0.2s ease;
+    transition: all 0.4s ease;
 
     &.active {
       flex: 0 0 $page-nav-width;
     }
 
     ul {
+      padding: 20px 10px 0;
+
       li {
+        width: 180px;
+        margin-bottom: 5px;
+        overflow: hidden;
+        line-height: 1.2rem;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+
         &.h2 {
           padding-left: 1em;
         }

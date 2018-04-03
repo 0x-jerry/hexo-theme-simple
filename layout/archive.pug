@@ -1,9 +1,5 @@
 -
-  let title = 'Archives'
-  if (page.archive){
-    if(page.year) title = page.year + (page.month ? '/' + page.month : '')
-    else title = 'Archives'
-  }
+  let title = __('archives.title')
 
 if title
   h2.simple-archive-title

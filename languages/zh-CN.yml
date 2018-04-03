@@ -1,2 +1,13 @@
-index:
+sidebar:
+  home: '主页'
+  archives: '日志'
+  tags: '标签'
+
+home:
   title: '主页'
+
+archives:
+  title: '日志'
+
+tags:
+  title: '标签'
