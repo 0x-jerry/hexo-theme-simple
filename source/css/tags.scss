@@ -1,0 +1,33 @@
+.simple-tags {
+  ul.tags {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    margin: 40px auto;
+
+    li {
+      width: 33%;
+
+      a {
+        display: block;
+        padding: 20px 10px;
+        margin: 10px 25px;
+        border-radius: 1px;
+        box-shadow: 0 0 2px $color-primary;
+
+        &::after,
+        &::before {
+          content: none;
+        }
+
+        &:hover {
+          color: $color-white;
+          background-color: $color-primary;
+          box-shadow: 0 0 10px $color-primary;
+        }
+      }
+    }
+  }
+}

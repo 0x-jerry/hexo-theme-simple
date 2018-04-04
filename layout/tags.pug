@@ -1,0 +1,27 @@
+-
+  let tags = []
+  let find = {}
+  site.posts.forEach(post => {
+    post.tags.data.forEach(tag => {
+      find = tags.find(T => T.name === tag.name)
+
+      if(find) find.number ++
+      else tags.push({
+        name: tag.name,
+        path: tag.path,
+        number: 1,
+      })
+    })
+  })
+
+  tags.sort((a, b) => a.number < b.number)
+
+.simple-tags
+  h1.title=__('tags.title')
+
+  ul.tags
+    each tag in tags
+      li
+        a(href=url_for(tag.path))
+          | #{tag.name} ( #{tag.number} )
+

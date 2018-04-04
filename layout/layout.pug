@@ -10,7 +10,7 @@ html
       !=body
       include _partial/footer
 
-    if page.title
+    if page.title && page.type !== 'tags'
       #post-nav
 
     include _partial/after-footer

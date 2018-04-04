@@ -1,6 +1,13 @@
 .simple-sidebar {
   margin-top: 20px;
 
+  a {
+    &::before,
+    &::after {
+      content: none;
+    }
+  }
+
   .avatar {
     width: 100px;
     height: 100px;
