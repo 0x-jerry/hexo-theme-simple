@@ -1,3 +1,9 @@
+-
+  let title = config.title
+
+  if (page.archive) title += `-${__('archives.title')}`
+  else if (page.title) title += `-${page.title}`
+
 head
   meta(name="description", content=config.description)
   meta(name="author", content=config.author)
@@ -10,4 +16,4 @@ head
   link(rel="stylesheet", href=config.root + "fonts/fonts.css")
   link(rel="stylesheet", href=config.root + "css/layout.css")
 
-  title= config.title
+  title=title

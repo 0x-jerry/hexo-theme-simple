@@ -23,7 +23,7 @@
       li(class=name.toLowerCase())
         a(href=url_for(value.path))
           i.fa(class="fa-" + value.icon)
-          = __(`sidebar.${name.toLowerCase()}`)
+          = __(`${name.toLowerCase()}.title`)
 
   .decoration-line
 
