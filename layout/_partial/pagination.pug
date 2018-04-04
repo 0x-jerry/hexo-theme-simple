@@ -1,10 +1,10 @@
 .simple-pagination
   ul
     if page.prev
-      li
+      li.prev
         a(href=config.root+page.prev_link)
           = __('pagination.prev')
     if page.next
-      li
+      li.next
         a(href=config.root+page.next_link)
           = __('pagination.next')

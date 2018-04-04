@@ -1,7 +1,8 @@
 .simple-sidebar
   .head
     .avatar
-      img(src="holder.js/200x200", alt="", srcset="")
+      a(href=config.root)
+        img(src="holder.js/200x200", alt="", srcset="")
 
     .info
       h3.author
@@ -23,3 +24,12 @@
           i.fa(class="fa-" + value.icon)
           = __(`sidebar.${name.toLowerCase()}`)
   .decoration-line
+
+  .simple-tags
+    ul
+      if page.tags && page.tags.length
+        each tag in page.tags.data
+          li
+            a(href=config.root+tag.path)
+              i.fa.fa-tag
+              =tag.name

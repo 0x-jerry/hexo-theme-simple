@@ -1,0 +1,12 @@
+.simple-pagination {
+  overflow: hidden;
+
+  ul {
+    display: flex;
+    justify-content: center;
+
+    li {
+      padding-right: 5px;
+    }
+  }
+}

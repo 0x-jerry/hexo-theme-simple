@@ -22,12 +22,7 @@
 
   .code {
     pre {
-      font-family: 'Fira Code';
-      font-size: 0.95em;
-      font-feature-settings: "calt" 1;  /* Enable ligatures for IE 10+, Edge */
-      text-rendering: optimizeLegibility; /* Force ligatures for Webkit, Blink, Gecko */
-      word-break: break-all;
-      white-space: pre-wrap;
+      @include code-style();
     }
 
     .comment,
