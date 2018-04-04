@@ -1,5 +1,6 @@
 -
   let title = __('archives.title')
+  if(page.tag) title = page.tag.toString()
 
 if title
   h2.simple-archive-title

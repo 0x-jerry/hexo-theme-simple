@@ -1,5 +1,11 @@
 $(document).ready(() => {
+  let $pageNav = $('#post-nav')
 
+  if($pageNav[0]) generateTOC($pageNav)
+
+})
+
+function generateTOC($pageNav) {
   const $content = $('#post-content')
   const $ul = $('<ul> </ul>')
 
@@ -19,5 +25,5 @@ $(document).ready(() => {
     $ul.append($li)
   })
 
-  $('#page-nav-bar').append($ul).addClass('active')
-})
+  $pageNav.append($ul).addClass('active')
+}

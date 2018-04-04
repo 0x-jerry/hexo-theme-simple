@@ -10,9 +10,6 @@ menu:
     path: /tags
     icon: tag
 
-# Read More text
-excerpt_link: Read More
-
 # links
 links:
   github:

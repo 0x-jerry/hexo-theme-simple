@@ -1,11 +1,14 @@
 @import 'global.scss';
 @import 'index.scss';
+@import 'post.scss';
 @import 'sidebar.scss';
 @import 'markdown.scss';
 @import 'footer.scss';
 
 body {
   display: flex;
+  max-width: 1920px;
+  margin: 0 auto;
   overflow: hidden;
   background-color: $color-white;
 
@@ -18,42 +21,18 @@ body {
     padding: 0 50px;
   }
 
-  #page-nav-bar {
+  #post-nav {
     display: flex;
     flex: 0;
     justify-content: center;
     height: 100vh;
     font-size: smaller;
+    border-right: 1px solid lighten($color: $color-primary, $amount: 30);
     border-left: 1px solid lighten($color: $color-primary, $amount: 30);
     transition: all 0.4s ease;
 
     &.active {
       flex: 0 0 $page-nav-width;
-    }
-
-    ul {
-      padding: 20px 10px 0;
-
-      li {
-        width: 180px;
-        margin-bottom: 5px;
-        overflow: hidden;
-        line-height: 1.2rem;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-
-        &.h2 {
-          padding-left: 1em;
-        }
-
-        &.h3 {
-          padding-left: 2em;
-        }
-
-        &.h4 {
-          padding-left: 3em;
-        }
-      }
     }
   }
 
@@ -61,5 +40,6 @@ body {
     flex: 0 0 $nav-width;
     height: 100vh;
     border-right: 1px solid lighten($color: $color-primary, $amount: 30);
+    border-left: 1px solid lighten($color: $color-primary, $amount: 30);
   }
 }

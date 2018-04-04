@@ -2,7 +2,9 @@
   ul
     if page.prev
       li
-        a(href=config.root+page.prev_link) Previous
+        a(href=config.root+page.prev_link)
+          = __('pagination.prev')
     if page.next
       li
-        a(href=config.root+page.next_link) Next
+        a(href=config.root+page.next_link)
+          = __('pagination.next')
