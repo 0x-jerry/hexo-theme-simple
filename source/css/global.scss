@@ -17,7 +17,8 @@ a {
   color: $color-gray;
   text-decoration: unset;
   border: none;
-  transition: all 0.2s ease;
+
+  @include transitioned();
 
   &::before,
   &::after {
@@ -30,7 +31,7 @@ a {
   }
 
   &::before {
-    border-bottom: 1px solid $color-gray;
+    border-bottom: 1px solid lighten($color: $color-gray, $amount: 40);
   }
 
   &::after {
@@ -54,10 +55,6 @@ a {
 ul {
   padding-left: 0;
   list-style: none;
-}
-
-div {
-  overflow: auto;
 }
 
 .decoration-line {

@@ -1,16 +1,18 @@
 .simple-index
   each item in page.posts.data
     .artical-excerpt
-      h2.title
-        a(href=config.root+item.path) #{item.title}
-      p.meta
-        = item.date.format(config.date_format)
+      .title
+        span.h1=item.title
+        span.meta
+          = item.date.format(config.date_format)
         if item.author
+          span.meta
           | by #{item.author}
+
       .markdown-content
         !=item.excerpt || item.content
-      if item.excerpt
-        p.more
-          a(href=config.root+item.path)
-            = __('home.excerpt_link')
+
+      a.excerpt-link(href=url_for(item.path))
+        .text=__('home.excerpt_link')
+
   include _partial/pagination

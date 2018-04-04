@@ -1,0 +1,8 @@
+.simple-tags
+  ul
+    if page.tags && page.tags.length
+      each tag in page.tags.data
+        li
+          a(href=config.root+tag.path)
+            i.fa.fa-tag
+            =tag.name
