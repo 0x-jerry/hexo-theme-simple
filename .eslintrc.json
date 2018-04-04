@@ -12,5 +12,8 @@
             "jsx": true
         },
         "sourceType": "module"
+    },
+    "globals": {
+      "hljs": true
     }
 }

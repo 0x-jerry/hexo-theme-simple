@@ -1,0 +1,70 @@
+@import 'highlight/github.scss';
+
+.markdown-content {
+  overflow: hidden;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    position: relative;
+    padding-left: 8px;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      content: '';
+      border-left: 4px solid $color-primary;
+    }
+  }
+
+  p {
+    line-height: 1.6em;
+  }
+
+  ol,
+  ul {
+    line-height: 1.3em;
+    color: $color-gray;
+  }
+
+  code {
+    padding: 2px 3px;
+    color: $color-primary;
+    white-space: nowrap;
+    border: 1px solid lighten($color: $color-primary, $amount: 25);
+    border-radius: 3px;
+  }
+
+  blockquote {
+    position: relative;
+    padding: 1px 16px 1px 20px;
+    margin: 16px 24px 16px 20px;
+    color: lighten($color: $color-gray, $amount: 30);
+    background-color: darken($color: $color-white, $amount: 6);
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      content: '';
+      border-left: 4px solid $color-gray;
+    }
+
+    ul,
+    ol {
+      color: inherit;
+    }
+
+    p {
+      color: lighten($color: $color-gray, $amount: 30);
+    }
+  }
+}

@@ -1,4 +1,4 @@
-$(window).ready(() => {
+$(document).ready(() => {
   const pathname = window.location.pathname
 
   switch (pathname) {

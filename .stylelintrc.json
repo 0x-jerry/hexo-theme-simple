@@ -3,7 +3,7 @@
   "rules": {
     "at-rule-no-unknown": [true, {
       "ignoreAtRules": [
-        "mixin", "extend", "content"
+        "mixin", "extend", "content", "include"
       ]
     }]
   }

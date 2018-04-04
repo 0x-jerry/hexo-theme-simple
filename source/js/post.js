@@ -1,4 +1,5 @@
-$(window).ready(() => {
+$(document).ready(() => {
+
   const $content = $('#post-content')
   const $ul = $('<ul> </ul>')
 
