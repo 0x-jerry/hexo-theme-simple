@@ -2,7 +2,7 @@
   .head
     .avatar
       a(href=config.root)
-        img(src="holder.js/200x200", alt="", srcset="")
+        img(src=url_for(theme.avatar), alt="", srcset="")
 
     .info
       h3.author
@@ -15,7 +15,8 @@
       li
         a(href=link.link target='_blank')
           i.fa(class="fa-" + link.icon)
-          span= name
+          span=name
+
   .decoration-line
   ul.menu
     each value, name in theme.menu
@@ -23,6 +24,7 @@
         a(href=url_for(value.path))
           i.fa(class="fa-" + value.icon)
           = __(`sidebar.${name.toLowerCase()}`)
+
   .decoration-line
 
   include article-tags

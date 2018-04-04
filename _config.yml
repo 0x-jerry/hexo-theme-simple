@@ -1,4 +1,10 @@
+favicon: favicon/favicon.ico
+
+# 100x100
+avatar: imgs/avatar.jpg
+
 # menu
+# icon use fontawesome class
 menu:
   Home:
     path: /
@@ -11,13 +17,11 @@ menu:
     icon: tag
 
 # links
+# icon use fontawesome class
 links:
   github:
     link: https://cwxyz007.github.io/
     icon: github
   email:
-    link: mailto:844067636@qq.com
-    icon: envelope
-  other:
     link: mailto:844067636@qq.com
     icon: envelope

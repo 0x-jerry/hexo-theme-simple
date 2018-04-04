@@ -6,7 +6,24 @@
     justify-content: center;
 
     li {
-      padding-right: 5px;
+      padding-right: 10px;
+
+      a {
+        padding: 10px 20px;
+        border-radius: 2px;
+        box-shadow: 0 0 2px $color-primary;
+
+        &::before,
+        &::after {
+          content: none;
+        }
+
+        &:hover {
+          color: $color-white;
+          background-color: $color-primary;
+          box-shadow: 0 0 10px $color-primary;
+        }
+      }
     }
   }
 }
