@@ -1,6 +1,6 @@
 # hexo-simple-template
 
-## [Live](cwxyz007.github.io)
+## [Live](https://cwxyz007.github.io)
 
 ## 如何测试
 
