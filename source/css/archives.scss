@@ -36,8 +36,11 @@
 
             .title {
               margin-bottom: 4px;
+              overflow: hidden;
               font-size: large;
               font-weight: bold;
+              text-overflow: ellipsis;
+              white-space: nowrap;
             }
           }
         }
