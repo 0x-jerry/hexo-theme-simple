@@ -1,0 +1,41 @@
+.simple-archives {
+  .archives {
+    .archive {
+      ul.posts {
+        display: flex;
+        flex-wrap: wrap;
+
+        li {
+          width: 25%;
+          overflow: hidden;
+          border-radius: 2px;
+
+          a.post {
+            display: block;
+            padding: 10px 10px;
+            margin: 10px 25px;
+            border-radius: 1px;
+            box-shadow: 0 0 2px $color-primary;
+
+            &::before,
+            &::after {
+              content: none;
+            }
+
+            &:hover {
+              color: $color-white;
+              background-color: $color-primary;
+              box-shadow: 0 0 10px $color-primary;
+            }
+
+            .title {
+              margin-bottom: 4px;
+              font-size: large;
+              font-weight: bold;
+            }
+          }
+        }
+      }
+    }
+  }
+}
