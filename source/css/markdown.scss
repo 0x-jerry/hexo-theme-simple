@@ -29,14 +29,14 @@
 
   ol,
   ul {
-    line-height: 1.3em;
+    line-height: 1.6em;
     color: $color-gray;
   }
 
   code {
     @include code-style();
 
-    padding: 2px 3px;
+    padding: 1px 4px;
     color: $color-primary;
     border: 1px solid lighten($color: $color-primary, $amount: 25);
     border-radius: 3px;
