@@ -4,6 +4,20 @@
   overflow: hidden;
   line-height: 1.6em;
 
+  img {
+    display: block;
+    max-width: 95%;
+    margin: 0 auto;
+    cursor: pointer;
+    box-shadow: 0 0 2px $color-primary;
+
+    @include transitioned();
+
+    &:hover {
+      box-shadow: 0 0 10px $color-primary;
+    }
+  }
+
   h1,
   h2,
   h3,

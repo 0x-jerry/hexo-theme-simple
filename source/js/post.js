@@ -1,8 +1,9 @@
 $(document).ready(() => {
+  $('.markdown-content img').fancyImg()
+
   let $pageNav = $('#post-nav')
 
   if($pageNav[0]) generateTOC($pageNav)
-
 })
 
 function generateTOC($pageNav) {
