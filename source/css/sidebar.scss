@@ -1,6 +1,11 @@
 .simple-sidebar {
   margin-top: 20px;
 
+  ul {
+    padding-left: 0;
+    list-style: none;
+  }
+
   a {
     &::before,
     &::after {
