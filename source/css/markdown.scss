@@ -38,6 +38,26 @@
     }
   }
 
+  h2::before {
+    border-left-color: lighten($color: $color-primary, $amount: 10);
+  }
+
+  h3::before {
+    border-left-color: lighten($color: $color-primary, $amount: 20);
+  }
+
+  h4::before {
+    border-left-color: lighten($color: $color-primary, $amount: 30);
+  }
+
+  h5::before {
+    border-left-color: lighten($color: $color-primary, $amount: 40);
+  }
+
+  h6::before {
+    border-left-color: lighten($color: $color-primary, $amount: 50);
+  }
+
   p {
     line-height: inherit;
   }

@@ -2,7 +2,7 @@
   let title = config.title
 
   if (page.archive) title += `-${__('archives.title')}`
-  else if (page.title) title += `-${page.title}`
+  else if (page.title) title += ` - ${page.title}`
 
 head
   meta(name="description", content=config.description)
