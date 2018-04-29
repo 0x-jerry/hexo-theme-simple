@@ -47,4 +47,75 @@ body {
     border-right: 1px solid lighten($color: $color-primary, $amount: 30);
     border-left: 1px solid lighten($color: $color-primary, $amount: 30);
   }
+
+  .simple-mobile-nav {
+    display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  body {
+    #post-nav {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  body {
+    width: 100%;
+
+    #post-nav {
+      display: none;
+    }
+
+    .simple-layout-nav {
+      position: fixed;
+      top: -100%;
+      left: 0;
+      z-index: 10;
+      flex: none;
+      width: 100%;
+      background-color: darken($color: $color-white, $amount: 0);
+
+      @include transitioned(0.2s);
+
+      &.active {
+        top: 0;
+      }
+    }
+
+    .simple-mobile-nav {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      z-index: 20;
+      display: block;
+      font-size: larger;
+
+      #mobile-nav {
+        .up {
+          display: none;
+        }
+
+        &.active {
+          .up {
+            display: block;
+          }
+
+          .down {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  body {
+    .simple-layout-content {
+      padding: 0 30px;
+    }
+  }
 }

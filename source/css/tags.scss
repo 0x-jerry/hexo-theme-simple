@@ -33,3 +33,16 @@
     }
   }
 }
+
+@media (max-width: 500px) {
+  .simple-tags {
+    ul.tags {
+      flex-direction: column;
+      padding: 0;
+
+      li {
+        width: 100%;
+      }
+    }
+  }
+}

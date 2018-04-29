@@ -4,6 +4,8 @@
   overflow-x: auto;
   color: #333;
   background: #f8f8f8;
+  border-radius: 5px;
+  box-shadow: 0 0 1px lighten($color: $color-gray, $amount: 30);
 
   .gutter {
     position: relative;

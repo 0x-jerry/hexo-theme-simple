@@ -10,6 +10,7 @@
       ul.posts {
         display: flex;
         flex-wrap: wrap;
+        padding-left: 0;
 
         li {
           width: 25%;
@@ -42,6 +43,22 @@
               text-overflow: ellipsis;
               white-space: nowrap;
             }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .simple-archives {
+    .archives {
+      .archive {
+        ul.posts {
+          flex-direction: column;
+
+          li {
+            width: 100%;
           }
         }
       }
