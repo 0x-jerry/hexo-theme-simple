@@ -71,17 +71,18 @@ body {
 
     .simple-layout-nav {
       position: fixed;
-      top: -100%;
+      top: 0;
       left: 0;
       z-index: 10;
       flex: none;
       width: 100%;
       background-color: darken($color: $color-white, $amount: 0);
+      transform: translateY(-100%);
 
-      @include transitioned(0.2s);
+      @include transitioned(0.4s);
 
       &.active {
-        top: 0;
+        transform: translateY(0);
       }
     }
 
