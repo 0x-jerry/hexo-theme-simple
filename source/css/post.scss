@@ -22,7 +22,7 @@
 
 #post-nav {
   ul {
-    padding: 20px 10px 0;
+    padding: 5px 10px 0;
 
     li {
       width: 180px;
@@ -31,18 +31,6 @@
       line-height: 1.2rem;
       text-overflow: ellipsis;
       white-space: nowrap;
-
-      &.h2 {
-        padding-left: 1em;
-      }
-
-      &.h3 {
-        padding-left: 2em;
-      }
-
-      &.h4 {
-        padding-left: 3em;
-      }
     }
   }
 }
