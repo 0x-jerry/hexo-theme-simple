@@ -4,13 +4,13 @@
   ul {
     display: flex;
     justify-content: center;
+    list-style: none;
 
     li {
       padding-right: 10px;
 
       a {
         padding: 10px 20px;
-        border-radius: 2px;
         box-shadow: 0 0 2px $color-primary;
 
         &::before,

@@ -14,13 +14,11 @@
 
         li {
           overflow: hidden;
-          border-radius: 2px;
 
           a.post {
             display: block;
             padding: 10px 20px;
             margin: 10px;
-            border-radius: 1px;
             box-shadow: 0 0 2px $color-primary;
 
             &::before,

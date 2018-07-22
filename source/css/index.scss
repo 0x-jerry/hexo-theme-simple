@@ -5,13 +5,12 @@
   padding-top: 30px;
   margin: 0 auto;
 
-  .artical-excerpt {
+  .article-excerpt {
     position: relative;
     display: block;
     padding: 20px 50px;
     margin-bottom: 30px;
     overflow: hidden;
-    border-radius: 2px;
     box-shadow: 0 0 2px $color-primary;
 
     @include transitioned();
@@ -76,7 +75,46 @@
         padding: 20px 40px;
         margin: 0;
         color: $color-white;
-        background-color: transparentize($color: $color-primary, $amount: 0.2);
+        background-color: lighten($color: $color-primary, $amount: 20);
+
+        &:hover {
+          background-color: $color-primary;
+        }
+
+        &::before,
+        &::after {
+          content: none;
+        }
+      }
+
+      .tags {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+
+        ul {
+          list-style: none;
+          padding: 0;
+          margin: 5px 0;
+          display: flex;
+
+          li {
+            margin-right: 7px;
+
+            a {
+              color: lighten($color: $color-primary, $amount: 20);
+
+              &:hover {
+                color: $color-primary;
+              }
+
+              &::before,
+              &::after {
+                content: none;
+              }
+            }
+          }
+        }
       }
     }
   }
@@ -84,7 +122,7 @@
 
 @media (max-width: 500px) {
   .simple-index {
-    .artical-excerpt {
+    .article-excerpt {
       padding: 10px 15px 0;
     }
   }

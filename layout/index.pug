@@ -1,6 +1,6 @@
 .simple-index
   each item in page.posts.data
-    .artical-excerpt
+    .article-excerpt
       .title
         span.h1=item.title
         span.meta
@@ -8,11 +8,13 @@
         if item.author
           span.meta
           | by #{item.author}
-
       .markdown-content
         !=item.excerpt || item.content
 
-      a.excerpt-link(href=url_for(item.path))
-        .text=__('home.excerpt_link')
+      .excerpt-link(href=url_for(item.path))
+        a.text
+          =__('home.excerpt_link')
+        .tags
+          include _partial/article-tags.pug
 
   include _partial/pagination
