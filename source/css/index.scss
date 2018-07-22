@@ -120,6 +120,19 @@
   }
 }
 
+@media (max-width: 800px) {
+  .simple-index {
+    .article-excerpt {
+      .excerpt-link {
+        & > * {
+          display: none;
+        }
+      }
+    }
+  }
+
+}
+
 @media (max-width: 500px) {
   .simple-index {
     .article-excerpt {
