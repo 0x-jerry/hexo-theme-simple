@@ -13,14 +13,13 @@
         padding-left: 0;
 
         li {
-          width: 25%;
           overflow: hidden;
           border-radius: 2px;
 
           a.post {
             display: block;
-            padding: 10px 10px;
-            margin: 10px 25px;
+            padding: 10px 20px;
+            margin: 10px;
             border-radius: 1px;
             box-shadow: 0 0 2px $color-primary;
 
@@ -30,8 +29,6 @@
             }
 
             &:hover {
-              color: $color-white;
-              background-color: $color-primary;
               box-shadow: 0 0 10px $color-primary;
             }
 
