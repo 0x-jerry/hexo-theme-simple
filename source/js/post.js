@@ -1,3 +1,5 @@
+const HEADER_HEIGHT = 60;
+
 $(document).ready(() => {
   $('.markdown-content img').fancyImg();
 
@@ -17,7 +19,7 @@ function syncTOC($content) {
 
     for (let i = 0; i < max; i++) {
       const $ele = $($elements[i]);
-      if ($ele.offset().top >= $content.scrollTop()) {
+      if ($ele.offset().top >= $content.scrollTop() + HEADER_HEIGHT) {
         mark = i;
         break;
       }
@@ -28,20 +30,20 @@ function syncTOC($content) {
       const $ele = $(
         $('#post-nav')
           .find('a')
-          .get(mark)
+          .get(mark),
       );
 
       $lis.removeClass('hover');
       $ele.addClass('hover');
     }
-  }
+  };
 
   $($content).scroll(calcActive);
   calcActive();
 }
 
 function getTOC($content) {
-  const getChildTOC = list => {
+  const getChildTOC = (list) => {
     const level = list.node.level + 1;
 
     for (let index = 0; index < list.children.length; index++) {
@@ -71,24 +73,24 @@ function getTOC($content) {
       text,
       href: text
         .split(/[\s.*+?^=!:${}()|[\]/\\]+/)
-        .filter(item => item !== '')
-        .join('-')
+        .filter((item) => item !== '')
+        .join('-'),
     };
 
     if (preLevel === level) {
       list.push({
         node,
-        children: []
+        children: [],
       });
     } else {
       list[list.length - 1].children.push({
         node,
-        children: []
+        children: [],
       });
     }
   });
 
-  list.forEach(child => {
+  list.forEach((child) => {
     getChildTOC(child);
   });
 
@@ -96,13 +98,20 @@ function getTOC($content) {
 }
 
 function generateTOC($pageNav, $content) {
-  const generate = list => {
+  const generate = (list) => {
     const $ul = $('<ul> </ul>');
 
-    list.forEach(child => {
+    list.forEach((child) => {
       const $li = $('<li> </li>');
 
-      $li.append($(`<a href='#${child.node.href}'>${child.node.text}</a>`));
+      const $a = $(`<a>${child.node.text}</a>`);
+      $a.click(() => {
+        const top = $('#' + child.node.href).offset().top - HEADER_HEIGHT;
+        $(window).scrollTop(top);
+      });
+
+      // $li.append($(`<a href='#${child.node.href}'>${child.node.text}</a>`));
+      $li.append($a);
 
       if (child.children.length !== 0) {
         $li.append(generate(child.children));
