@@ -6,7 +6,7 @@ $(document).ready(() => {
 
   if ($pageNav[0]) generateTOC($pageNav, $postContent);
 
-  syncTOC($('.simple-layout-content'));
+  syncTOC($(window));
 });
 
 function syncTOC($content) {
@@ -17,7 +17,7 @@ function syncTOC($content) {
 
     for (let i = 0; i < max; i++) {
       const $ele = $($elements[i]);
-      if ($ele.offset().top >= 0) {
+      if ($ele.offset().top >= $content.scrollTop()) {
         mark = i;
         break;
       }

@@ -1,56 +1,55 @@
 @import 'global.scss';
 @import 'index.scss';
 @import 'post.scss';
-@import 'sidebar.scss';
+@import 'navbar.scss';
 @import 'markdown.scss';
 @import 'footer.scss';
 @import 'tags.scss';
 @import 'archives.scss';
 
+
 body {
-  display: flex;
-  max-width: 1920px;
   margin: 0 auto;
-  overflow: hidden;
   background-color: $color-white;
 
   $nav-width: 220px;
-  $page-nav-width: 260px;
+  $nav-height: 60px;
+  $page-nav-width: 200px;
+  $simple-content-width: 900px;
 
   .simple-layout-content {
-    flex: 1;
-    height: 100vh;
     padding: 0 50px;
-    overflow: auto;
-    scroll-behavior: smooth;
+    margin: $nav-height + 10px auto 0;
+    max-width: $simple-content-width;
+  }
+
+  .simple-layout-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: $nav-height;
+    overflow: hidden;
+    border-bottom: 1px solid lighten($color: $color-primary, $amount: 30);
+    background-color: $color-white;
+    z-index: 100;
   }
 
   #post-nav {
+    position: fixed;
+    left: calc(50% + 460px);
+    top: 70px;
     display: flex;
-    flex: 0 0 $page-nav-width;
-    justify-content: center;
-    height: 100vh;
-    overflow: auto;
+    width: $page-nav-width;
     font-size: smaller;
-    border-right: 1px solid lighten($color: $color-primary, $amount: 30);
-    border-left: 1px solid lighten($color: $color-primary, $amount: 30);
+    border: 1px solid lighten($color: $color-primary, $amount: 30);
     opacity: 0;
-    position: relative;
-    top: -10px;
 
     @include transitioned(0.8s);
 
     &.active {
       opacity: 1;
-      top: 0px;
     }
-  }
-
-  .simple-layout-nav {
-    flex: 0 0 $nav-width;
-    height: 100vh;
-    border-right: 1px solid lighten($color: $color-primary, $amount: 30);
-    border-left: 1px solid lighten($color: $color-primary, $amount: 30);
   }
 
   .simple-mobile-nav {
@@ -58,7 +57,7 @@ body {
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1360px) {
   body {
     #post-nav {
       display: none;
@@ -66,62 +65,3 @@ body {
   }
 }
 
-@media (max-width: 800px) {
-  body {
-    width: 100%;
-
-    #post-nav {
-      display: none;
-    }
-
-    .simple-layout-nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: 10;
-      flex: none;
-      width: 100%;
-      background-color: darken($color: $color-white, $amount: 0);
-      transform: translateY(-100%);
-
-      @include transitioned(0.4s);
-
-      &.active {
-        transform: translateY(0);
-      }
-    }
-
-    .simple-mobile-nav {
-      position: fixed;
-      top: 10px;
-      right: 10px;
-      z-index: 20;
-      display: block;
-      font-size: larger;
-
-      #mobile-nav {
-        .up {
-          display: none;
-        }
-
-        &.active {
-          .up {
-            display: block;
-          }
-
-          .down {
-            display: none;
-          }
-        }
-      }
-    }
-  }
-}
-
-@media (max-width: 500px) {
-  body {
-    .simple-layout-content {
-      padding: 0 30px;
-    }
-  }
-}

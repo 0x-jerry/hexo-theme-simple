@@ -1,0 +1,25 @@
+.simple-sidebar
+  .avatar
+    a(href=config.root)
+      img(src=url_for(theme.avatar), alt="", srcset="")
+
+  .info
+    h3.author= config.author
+    small.subtitle= config.subtitle
+
+  .menu
+    each value, name in theme.menu
+      span(class=name.toLowerCase())
+        a(href=url_for(value.path))
+          i.fa(class="fa-" + value.icon)
+          = __(`${name.toLowerCase()}.title`)
+
+  .links
+    each link, name in theme.links
+      span.item
+        a(href=link.link target='_blank')
+          i.fa(class="fa-" + link.icon)
+          span=name
+
+  //- if page.tags
+    //- include article-tags
