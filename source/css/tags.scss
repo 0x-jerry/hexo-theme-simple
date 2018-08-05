@@ -15,15 +15,12 @@
         display: block;
         padding: 20px 10px;
         margin: 10px 25px;
-        box-shadow: 0 0 2px $color-primary;
+
+        @include card();
 
         &::after,
         &::before {
           content: none;
-        }
-
-        &:hover {
-          box-shadow: 0 0 10px $color-primary;
         }
       }
     }

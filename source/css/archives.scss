@@ -19,15 +19,12 @@
             display: block;
             padding: 10px 20px;
             margin: 10px;
-            box-shadow: 0 0 2px $color-primary;
+
+            @include card();
 
             &::before,
             &::after {
               content: none;
-            }
-
-            &:hover {
-              box-shadow: 0 0 10px $color-primary;
             }
 
             .title {

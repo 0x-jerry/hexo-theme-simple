@@ -10,14 +10,9 @@
     padding: 20px 50px;
     margin-bottom: 30px;
     overflow: hidden;
-    box-shadow: 0 0 2px $color-primary;
     cursor: pointer;
 
-    @include transitioned();
-
-    &:hover {
-      box-shadow: 0 0 10px $color-primary;
-    }
+    @include card();
 
     .title {
       position: relative;

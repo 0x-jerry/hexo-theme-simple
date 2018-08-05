@@ -1,11 +1,22 @@
+@import '../base.scss';
+
 @mixin code-style() {
   font-family: 'Fira Code', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 0.95em;
-  font-feature-settings: "calt" 1;  /* Enable ligatures for IE 10+, Edge */
+  font-feature-settings: 'calt' 1; /* Enable ligatures for IE 10+, Edge */
   text-rendering: optimizeLegibility; /* Force ligatures for Webkit, Blink, Gecko */
   white-space: nowrap;
 }
 
-@mixin transitioned($time: 0.2s) {
+@mixin transitioned($time: 0.2s, $prop: all) {
   transition: all $time ease;
+}
+
+@mixin card($normal: 2px, $hover: 10px) {
+  box-shadow: 0 0 $normal $color-primary;
+  @include transitioned();
+
+  &:hover {
+    box-shadow: 0 0 $hover $color-primary;
+  }
 }

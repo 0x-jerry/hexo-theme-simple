@@ -12,6 +12,8 @@
   }
 
   a {
+    pointer-events: all;
+
     &::before,
     &::after {
       content: none;
