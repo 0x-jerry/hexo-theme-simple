@@ -27,6 +27,15 @@
     border-radius: 50%;
     overflow: hidden;
 
+    @include transitioned();
+
+    &:hover + .info {
+      .author,
+      .subtitle {
+        color: $color-primary;
+      }
+    }
+
     img {
       width: 100% !important;
       height: 100% !important;
@@ -38,6 +47,8 @@
     .subtitle {
       font-size: small;
       margin: 5px 0;
+
+      @include transitioned();
     }
   }
 

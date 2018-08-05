@@ -27,11 +27,10 @@ function syncTOC($content) {
 
     if (mark != -1) {
       const $lis = $('#post-nav').find('a');
-      const $ele = $(
-        $('#post-nav')
-          .find('a')
-          .get(mark),
-      );
+      const ele = $('#post-nav')
+        .find('a')
+        .get(mark);
+      const $ele = $(ele);
 
       $lis.removeClass('hover');
       $ele.addClass('hover');
