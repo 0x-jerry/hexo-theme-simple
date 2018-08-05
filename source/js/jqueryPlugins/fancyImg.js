@@ -1,50 +1,62 @@
 (($) => {
   $.fn.fancyImg = function() {
     this.each((index, ele) => {
-      const $ele = $(ele)
-      if (!$ele.attr('src')) return
+      const $ele = $(ele);
+      if (!$ele.attr('src')) return;
 
       $ele.click(() => {
-        const $img = $ele.clone(false, false)
+        const $img = $ele.clone(false, false);
 
-        const $box = getFancyBox($img)
-        $('body').append($box)
-        $box.fadeIn()
-      })
-    })
+        const $box = getFancyBox($img);
+        $('body').append($box);
+        $box.fadeIn();
+      });
+    });
 
-    return this
-  }
-})(jQuery)
+    return this;
+  };
+})(jQuery);
 
 function getFancyBox($img) {
-  const $box = $('<div> </div>')
-  $box.css ({
+  const $box = $('<div> </div>');
+
+  const hideBox = () => {
+    $box.fadeOut(() => {
+      $box.remove();
+    });
+  };
+
+  $box.css({
     position: 'fixed',
     display: 'none',
     top: 0,
     left: 0,
-    width: '100vw',
-    height: '100vh',
+    width: '100%',
+    height: '100%',
     overflow: 'auto',
     backgroundColor: 'rgba(0, 0, 0, 0.5)',
-  })
+    zIndex: 1000,
+  });
 
-  const $content = $('<div> </div>')
+  const $content = $('<div> </div>');
   $content.css({
     position: 'relative',
     top: '50%',
-    left: '50%',
+    transform: 'translateY(-50%)',
+    padding: '0 20px',
+    margin: '0 auto',
     width: 'fit-content',
-    margin: '20px',
-    transform: 'translate(-50%, -50%)',
-  })
+  });
 
-  $box.click(e => {
-    if(e.currentTarget === e.target) $box.remove()
-  })
+  $box.click((e) => {
+    if (e.currentTarget === e.target) hideBox();
+  });
 
-  $content.append($img)
-  $box.append($content)
-  return $box
+  $img.click((e) => {
+    if (e.currentTarget === e.target) hideBox();
+  });
+
+  $content.append($img);
+  $box.append($content);
+  return $box;
 }
