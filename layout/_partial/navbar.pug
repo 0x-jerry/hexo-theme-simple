@@ -17,7 +17,7 @@
   .links
     each link, name in theme.links
       span.item
-        a(href=link.link target='_blank')
+        a(href=link.link target='_blank' rel="noopener")
           i.fa(class="fa-" + link.icon)
           span=name
 
