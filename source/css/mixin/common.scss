@@ -13,7 +13,7 @@
 }
 
 @mixin card($normal: 2px, $hover: 10px) {
-  box-shadow: 0 0 $normal $color-primary;
+  // box-shadow: 0 0 $normal $color-primary;
   @include transitioned();
 
   &:hover {

@@ -34,6 +34,10 @@ body {
     z-index: 100;
     @include card();
     pointer-events: none;
+
+    &.active {
+      box-shadow: 0 0 2px $color-primary;
+    }
   }
 
   #post-nav {
@@ -43,18 +47,18 @@ body {
     display: flex;
     width: $page-nav-width;
     font-size: smaller;
-    pointer-events: none;
+    // pointer-events: none;
     opacity: 0;
 
-    @include card();
+    // @include card();
 
     &.active {
       opacity: 1;
     }
 
-    a {
-      pointer-events: all;
-    }
+    // a {
+    //   pointer-events: all;
+    // }
   }
 
   .simple-mobile-nav {

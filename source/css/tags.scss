@@ -12,11 +12,12 @@
       width: 33%;
 
       a {
+        @include card();
+
         display: block;
         padding: 20px 10px;
         margin: 10px 25px;
-
-        @include card();
+        box-shadow: 0 0 0 transparent;
 
         &::after,
         &::before {
