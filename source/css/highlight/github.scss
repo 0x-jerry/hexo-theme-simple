@@ -25,6 +25,7 @@
   .code {
     pre {
       @include code-style();
+      white-space: pre;
     }
 
     .comment,
