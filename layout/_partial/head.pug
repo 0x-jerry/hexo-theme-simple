@@ -10,10 +10,15 @@ head
   meta(charset="utf-8")
   meta(name="viewport", content="width=device-width, initial-scale=1")
   meta(http-equiv="XUA_Compatible", content="IE=edge")
+  if theme.ga.active
+    meta(name="ga", content=theme.ga.id)
 
   link(rel="icon", href=url_for(theme.favicon))
   link(rel="stylesheet", href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css")
   link(rel="stylesheet", href=config.root + "fonts/fonts.css")
   link(rel="stylesheet", href=config.root + "css/layout.css")
+  if theme.ga.active
+    script(async, src="https://www.googletagmanager.com/gtag/js?id=UA-101492756-1")
+    script(src=config.root + "js/ga.js")
 
   title=title

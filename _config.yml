@@ -25,3 +25,7 @@ links:
   email:
     link: mailto:844067636@qq.com
     icon: envelope
+
+ga:
+  active: true
+  id: 'UA-101492756-1'
