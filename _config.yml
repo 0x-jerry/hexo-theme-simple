@@ -19,13 +19,14 @@ menu:
 # links
 # icon use fontawesome class
 links:
-  github:
+  Github:
     link: https://github.com/cwxyz007
     icon: github
-  email:
+  Email:
     link: mailto:844067636@qq.com
     icon: envelope
 
+# google analytics
 ga:
   active: true
   id: 'UA-101492756-1'
