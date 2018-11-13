@@ -1,13 +1,13 @@
 $(document).ready(() => {
   $(window).scroll(
-    _.debounce(() => {
+    _.throttle(() => {
       const top = $(window).scrollTop();
-      if (top < 50) {
+      if (top < 5) {
         $('nav').removeClass('active');
       } else {
         $('nav').addClass('active');
       }
-    }),
+    }, 100),
   );
 
   $('.excerpt-link').click(function() {

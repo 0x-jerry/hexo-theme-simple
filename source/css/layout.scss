@@ -74,3 +74,21 @@ body {
   }
 }
 
+@media (max-width: 800px) {
+  body {
+    font-size: 12px;
+
+    .simple-layout-content {
+      padding: 0 10px;
+      margin-top: 50px;
+      .simple-index {
+        padding-top: 0;
+      }
+    }
+
+    .simple-layout-nav {
+      height: 50px;
+    }
+  }
+}
+

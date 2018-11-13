@@ -17,6 +17,7 @@ a {
   color: $color-gray;
   text-decoration: unset;
   border: none;
+  cursor: pointer;
 
   @include transitioned();
 

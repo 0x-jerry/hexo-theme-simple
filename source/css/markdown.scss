@@ -9,12 +9,13 @@
     max-width: 95%;
     margin: 0 auto;
     cursor: pointer;
-    box-shadow: 0 0 2px $color-primary;
+    box-shadow: 0 5px 10px rgba($color-primary, 0.1);
+    // border: 1px solid $color-primary;
 
     @include transitioned();
 
     &:hover {
-      box-shadow: 0 0 10px $color-primary;
+      box-shadow: 0 10px 20px rgba($color-primary, 0.2);
     }
   }
 

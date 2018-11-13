@@ -4,7 +4,8 @@
   overflow-x: auto;
   color: #333;
   background: #f8f8f8;
-  box-shadow: 0 0 1px lighten($color: $color-primary, $amount: 10);
+  // box-shadow: 0 0 1px lighten($color: $color-primary, $amount: 10);
+  border: 1px solid $color-primary;
 
   .gutter {
     position: relative;
