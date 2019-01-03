@@ -1,6 +1,6 @@
-@import 'lib/normalize.css';
-@import 'base.scss';
-@import 'mixin/common.scss';
+@import "./lib/normalize.css";
+@import "./base.scss";
+@import "./mixin/common.scss";
 
 h1,
 h2,
@@ -28,7 +28,7 @@ a {
     left: 0;
     width: 100%;
     height: 100%;
-    content: '';
+    content: "";
   }
 
   &::before {
@@ -60,7 +60,7 @@ div {
 }
 
 body {
-  font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
+  font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
