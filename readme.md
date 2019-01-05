@@ -1,35 +1,51 @@
-# hexo-simple-template
+# Hexo Theme Simple
 
 ## [Live](https://cwxyz007.github.io)
 
-## 如何测试
+![screen](images/hexo-theme-simple.gif)
 
-1. 搭建 Hexo 环境
-2. 在 Hexo 根目录下运行命令 `git clone https://github.com/cwxyz007/hexo-simple-template.git themes/simple`
-3. 修改 Hexo 的 `_config.yml` 文件，把 `theme: landscape` 改成 `theme: simple`
-4. 安装 `hexo-render-pug` 和 `hexo-renderer-scss` 插件
-5. 运行 `hexo s`
+## 安装 | Install
+
+1. 在 Hexo 根目录下运行命令 `git clone https://github.com/cwxyz007/hexo-simple-template.git themes/simple`
+2. 修改 Hexo 的 `_config.yml` 文件，把 `theme: landscape` 改成 `theme: simple`
+3. 安装 `hexo-render-pug` 和 `hexo-renderer-scss` 插件
+4. 运行 `hexo s`
 
 ```bash
-hexo init
-git clone https://github.com/cwxyz007/hexo-simple-template.git themes/simple
-yarn add hexo-render-pug hexo-renderer-sass
-hexo s
+hexo init # create a hexo project
+git clone https://github.com/cwxyz007/hexo-simple-template.git themes/simple # download hexo-theme
+yarn add hexo-render-pug hexo-renderer-sass # install dependencies
+hexo s # run hexo server
 ```
 
-## 文字阅读体验
+## 特点 | Feature
 
-- 使用渐变，使上下文字渐变消失
+- 支持 Google Analytics | Support Google Analytics
+- 支持添加[知识共享协议] | Support [Creative Commons license]
 
-## 相关资料
+## 配置 (Config)
 
-- [Hexo 变量](https://hexo.io/zh-cn/docs/variables.html)
-- [Hexo database api](https://hexo.io/warehouse/)
-- [SCSS 语法](http://sass.bootcss.com/docs/sass-reference/)
-- [Pug 模板语法](https://pugjs.org/zh-cn/language/attributes.html)
-- [写一个自己的 Hexo 主题](https://segmentfault.com/a/1190000006057336)
+```yaml
+# Google analytics
+ga:
+  active: true
+  id: 'UA-101492756-1'
 
-## 设计原则
+# Creative commons license
+# license 配置可以在每篇文章里面设置
+# License config can set by each article
+# ---
+# title: {{ title }}
+# date: {{ date }}
+# license: CC BY-NC
+# ---
+#
+cclicense:
+  # @license will replace with page.license
+  text: 版权声明：本文使用 @license
+  # Lower case
+  cc by-nc: https://creativecommons.org/licenses/by-nc/2.0/deed.zh
+```
 
-- 专注于阅读
-- 简洁
+[知识共享协议]: https://www.wikiwand.com/zh-hans/%E5%89%B5%E4%BD%9C%E5%85%B1%E7%94%A8%E6%8E%88%E6%AC%8A%E6%A2%9D%E6%AC%BE
+[Creative Commons license]: https://www.wikiwand.com/en/Creative_Commons_license
