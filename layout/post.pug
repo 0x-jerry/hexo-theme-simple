@@ -1,14 +1,27 @@
+-
+  // Creative commons license
+  const ccTpl = page.license ?
+    `<a alt="${page.license}" href="${theme.cclicense[page.license.toLowerCase()]}" target="_blank">${page.license}</a>`
+    : null;
+
 .simple-post
   h1.title
     = page.title || page.link
-  p.meta.post-meta
-    = page.date.format(config.date_format)
+  p.post-meta
+    span.meta.date=page.date.format(config.date_format)
+    if ccTpl
+      span.meta.license
+        != ccTpl
     if page.author
-      | by
-      = page.author
+      span.meta.author=page.author
 
   #post-content.markdown-content
     != page.content
-  br
 
-  include _partial/article-tags
+  hr.post-end
+  .post-footer
+    div.post-license
+      if ccTpl
+        !=theme.cclicense.text.replace('@license', ccTpl)
+
+    include _partial/article-tags

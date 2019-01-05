@@ -1,0 +1,13 @@
+.partial-simple-tags {
+  ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 5px 0;
+
+    li {
+      width: fit-content;
+      margin-right: 7px;
+    }
+  }
+}

@@ -1,10 +1,9 @@
 favicon: favicon/favicon.ico
 
-# 100x100
+# Size: 100x100
 avatar: imgs/avatar.jpg
 
-# menu
-# icon use fontawesome class
+# Icon use fontawesome class
 menu:
   Home:
     path: /
@@ -16,8 +15,7 @@ menu:
     path: /tags
     icon: tag
 
-# links
-# icon use fontawesome class
+# Icon use fontawesome class
 links:
   Github:
     link: https://github.com/cwxyz007
@@ -26,7 +24,13 @@ links:
     link: mailto:844067636@qq.com
     icon: envelope
 
-# google analytics
+# Google analytics
 ga:
   active: true
   id: 'UA-101492756-1'
+
+# Creative commons license
+cclicense:
+  text: 版权声明：本文使用 @license
+  # All in lower case
+  cc by-nc: https://creativecommons.org/licenses/by-nc/2.0/deed.zh

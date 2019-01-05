@@ -1,4 +1,29 @@
+@import './base.scss';
+
 .simple-post {
+  padding: 1px;
+
+  .post-meta {
+    .meta {
+      margin-right: 5px;
+      font-size: 0.8em;
+      padding: 2px 3px;
+      margin-right: 3px;
+      border-radius: 3px;
+      background-color: $color-primary;
+      color: $color-white;
+      a {
+        color: $color-white;
+        border: none;
+
+        &::before,
+        &::after {
+          content: none;
+        }
+      }
+    }
+  }
+
   .simple-tags {
     ul {
       display: flex;
@@ -13,6 +38,17 @@
           margin-right: 5px;
         }
       }
+    }
+  }
+
+  .post-end {
+    border-top: 1px dashed $color-gray;
+  }
+
+  .post-footer {
+    display: flex;
+    .post-license {
+      flex: auto;
     }
   }
 }
