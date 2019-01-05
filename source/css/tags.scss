@@ -1,28 +1,44 @@
-@import "./mixin/common.scss";
+@import './mixin/common.scss';
 
 .simple-tags {
+  padding: 50px 0;
+
   ul.tags {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
-    width: 90%;
     padding-left: 0;
-    margin: 40px auto;
     list-style: none;
+    font-size: 1.5em;
+    justify-content: center;
+    align-items: center;
 
     li {
-      width: 33%;
+      opacity: 1;
+      margin: 10px 13px;
 
       a {
+        display: block;
+        position: relative;
+        padding: 10px;
+        font-size: 1em;
+        padding-left: calc(1.5em + 10px);
         @include card();
 
-        display: block;
-        padding: 20px 10px;
-        margin: 10px 25px;
-        box-shadow: 0 0 0 transparent;
-
-        &::after,
         &::before {
+          content: '#';
+          position: absolute;
+          transform: none;
+          border-bottom: none;
+          width: fit-content;
+          height: fit-content;
+
+          font-size: 2em;
+          top: 50%;
+          left: 10px;
+          transform: translateY(-50%);
+        }
+
+        &::after {
           content: none;
         }
       }

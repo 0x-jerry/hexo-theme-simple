@@ -1,13 +1,13 @@
-@import "./global.scss";
-@import "./index.scss";
-@import "./post.scss";
-@import "./navbar.scss";
-@import "./markdown.scss";
-@import "./footer.scss";
-@import "./tags.scss";
-@import "./archives.scss";
-@import "./mixin/common.scss";
-@import "./base.scss";
+@import './global.scss';
+@import './index.scss';
+@import './post.scss';
+@import './navbar.scss';
+@import './markdown.scss';
+@import './footer.scss';
+@import './tags.scss';
+@import './archives.scss';
+@import './mixin/common.scss';
+@import './base.scss';
 
 body {
   margin: 0 auto;
@@ -33,11 +33,11 @@ body {
     overflow: hidden;
     background-color: $color-white;
     z-index: 100;
-    @include card();
     pointer-events: none;
+    @include transitioned();
 
     &.active {
-      box-shadow: 0 0 2px $color-primary;
+      box-shadow: 0 0 3px $color-primary;
     }
   }
 
@@ -48,18 +48,11 @@ body {
     display: flex;
     width: $page-nav-width;
     font-size: smaller;
-    // pointer-events: none;
     opacity: 0;
-
-    // @include card();
 
     &.active {
       opacity: 1;
     }
-
-    // a {
-    //   pointer-events: all;
-    // }
   }
 
   .simple-mobile-nav {

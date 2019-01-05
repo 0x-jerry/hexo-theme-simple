@@ -1,9 +1,9 @@
-@import "../base.scss";
+@import '../base.scss';
 
 @mixin code-style() {
-  font-family: "Fira Code", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Fira Code', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 0.95em;
-  font-feature-settings: "calt" 1; /* Enable ligatures for IE 10+, Edge */
+  font-feature-settings: 'calt' 1; /* Enable ligatures for IE 10+, Edge */
   text-rendering: optimizeLegibility; /* Force ligatures for Webkit, Blink, Gecko */
   white-space: nowrap;
 }
@@ -12,11 +12,22 @@
   transition: all $time ease;
 }
 
-@mixin card($normal: 2px, $hover: 10px) {
+@mixin card($normal: 2px, $blur: 10px) {
   // box-shadow: 0 0 $normal $color-primary;
   @include transitioned();
 
   &:hover {
-    box-shadow: 0 0 $hover $color-primary;
+    $offset: 4px;
+    box-shadow: 0 $offset $blur
+      transparentize($color: $color-primary, $amount: 0.7);
+
+    transform: translateY(-$offset);
+  }
+
+  @media (max-width: 500px) {
+    &:hover {
+      box-shadow: none;
+      transform: none;
+    }
   }
 }
