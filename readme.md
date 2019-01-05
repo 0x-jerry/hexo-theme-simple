@@ -6,14 +6,14 @@
 
 ## 安装 | Install
 
-1. 在 Hexo 根目录下运行命令 `git clone https://github.com/cwxyz007/hexo-simple-template.git themes/simple`
+1. 在 Hexo 根目录下运行命令 `git clone https://github.com/cwxyz007/hexo-theme-simple.git themes/simple`
 2. 修改 Hexo 的 `_config.yml` 文件，把 `theme: landscape` 改成 `theme: simple`
 3. 安装 `hexo-render-pug` 和 `hexo-renderer-scss` 插件
 4. 运行 `hexo s`
 
 ```bash
 hexo init # create a hexo project
-git clone https://github.com/cwxyz007/hexo-simple-template.git themes/simple # download hexo-theme
+git clone https://github.com/cwxyz007/hexo-theme-single.git themes/simple # download hexo-theme
 yarn add hexo-render-pug hexo-renderer-sass # install dependencies
 hexo s # run hexo server
 ```
@@ -48,4 +48,8 @@ cclicense:
 ```
 
 [知识共享协议]: https://www.wikiwand.com/zh-hans/%E5%89%B5%E4%BD%9C%E5%85%B1%E7%94%A8%E6%8E%88%E6%AC%8A%E6%A2%9D%E6%AC%BE
-[Creative Commons license]: https://www.wikiwand.com/en/Creative_Commons_license
+[creative commons license]: https://www.wikiwand.com/en/Creative_Commons_license
+
+## Bug
+
+[Bug report](https://github.com/cwxyz007/hexo-theme-simple/issues)
