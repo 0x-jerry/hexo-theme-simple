@@ -14,7 +14,7 @@
 ```bash
 hexo init # create a hexo project
 git clone https://github.com/cwxyz007/hexo-theme-single.git themes/simple # download hexo-theme
-yarn add hexo-render-pug hexo-renderer-sass # install dependencies
+yarn add hexo-render-pug hexo-renderer-scss # install dependencies
 hexo s # run hexo server
 ```
 
@@ -47,9 +47,13 @@ cclicense:
   cc by-nc: https://creativecommons.org/licenses/by-nc/2.0/deed.zh
 ```
 
-[知识共享协议]: https://www.wikiwand.com/zh-hans/%E5%89%B5%E4%BD%9C%E5%85%B1%E7%94%A8%E6%8E%88%E6%AC%8A%E6%A2%9D%E6%AC%BE
-[creative commons license]: https://www.wikiwand.com/en/Creative_Commons_license
-
 ## Bug
 
 [Bug report](https://github.com/cwxyz007/hexo-theme-simple/issues)
+
+[知识共享协议]: https://www.wikiwand.com/zh-hans/%E5%89%B5%E4%BD%9C%E5%85%B1%E7%94%A8%E6%8E%88%E6%AC%8A%E6%A2%9D%E6%AC%BE
+[creative commons license]: https://www.wikiwand.com/en/Creative_Commons_license
+
+## TODO
+
+- [ ] 预定义 image size
