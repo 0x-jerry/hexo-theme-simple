@@ -21,7 +21,7 @@ links:
     link: https://github.com/cwxyz007
     icon: github
   Email:
-    link: mailto:844067636@qq.com
+    link: mailto:fantasy.cwxyz@gmail.com
     icon: envelope
 
 # Google analytics
@@ -31,6 +31,6 @@ ga:
 
 # Creative commons license
 cclicense:
-  text: 版权声明：本文使用 @license
+  text: 版权声明：本文使用 @license 协议
   # All in lower case
   cc by-nc: https://creativecommons.org/licenses/by-nc/2.0/deed.zh
