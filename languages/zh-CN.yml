@@ -5,6 +5,9 @@ home:
 archives:
   title: '归档'
 
+categories:
+  title: '分类'
+
 tags:
   title: '标签'
 

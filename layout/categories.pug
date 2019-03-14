@@ -1,0 +1,36 @@
+-
+  let title = __('categories.title')
+
+  let categories = {}, category = null
+
+  site.posts.forEach(post => {
+    post.categories.forEach(category => {
+      const name = category.name
+      if (categories[name]) {
+        categories[name].push(post)
+      } else {
+        categories[name] = [post]
+      }
+    })
+  })
+
+  let number = Object.keys(categories).length
+
+.simple-archives
+  //- h1.title=title
+  //-   small.number
+  //-     | (#{number})
+
+  .archives
+    each posts, category in categories
+      .archive
+        h2.date
+          | #{category}
+
+        ul.posts
+          each post in posts
+            li
+              a.post(href=url_for(post.path))
+                .title=post.title
+                .meta=post.date.format(config.date_format)
+

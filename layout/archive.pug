@@ -1,9 +1,9 @@
 -
   let title = __('archives.title')
-  if (page.tag) title = page.tag.toString()
+
   let archives = [], archive = null, date = null
 
-  page.posts.forEach(post => {
+  site.posts.forEach(post => {
     date = new Date(post.date)
     archive = archives.find(arc => arc.date.getFullYear() === date.getFullYear() &&
                                    arc.date.getMonth() === date.getMonth() )
@@ -14,10 +14,12 @@
     })
   })
 
+  const number = archives.length
+
 .simple-archives
   //- h1.title=title
   //-   small.number
-  //-     | (#{page.posts.data.length})
+  //-     | (#{number})
 
   .archives
     each archive in archives
