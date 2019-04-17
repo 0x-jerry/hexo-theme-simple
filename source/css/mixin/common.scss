@@ -17,8 +17,7 @@
   @include transitioned();
 
   &:hover {
-    box-shadow: 0 $offset $blur
-      transparentize($color: $color-primary, $amount: 0.7);
+    box-shadow: 0 $offset $blur transparentize($color: $color-primary, $amount: 0.7);
 
     transform: translateY(-$offset);
   }
@@ -29,4 +28,10 @@
       transform: none;
     }
   }
+}
+
+@mixin center() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

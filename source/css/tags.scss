@@ -1,7 +1,10 @@
 @import './mixin/common.scss';
 
 .simple-tags {
-  padding: 50px 0;
+  width: 80%;
+  margin: auto;
+  min-height: inherit;
+  @include center();
 
   ul.tags {
     display: flex;
@@ -48,7 +51,10 @@
 
 @media (max-width: 500px) {
   .simple-tags {
+    width: 100%;
+
     ul.tags {
+      width: 100%;
       flex-direction: column;
       padding: 0;
 

@@ -1,18 +1,11 @@
 -
-  let tags = []
-  let find = {}
-  site.posts.forEach(post => {
-    post.tags.data.forEach(tag => {
-      find = tags.find(T => T.name === tag.name)
-
-      if(find) find.number ++
-      else tags.push({
-        name: tag.name,
-        path: tag.path,
-        number: 1,
-      })
-    })
-  })
+  let tags = site.tags.toArray();
+  tags = tags.map(tag => ({
+      name: tag.name,
+      path: tag.path,
+      number: tag.posts.count()
+    }))
+    .filter(tag => tag.number)
 
   let maxTagNumber = 1;
 

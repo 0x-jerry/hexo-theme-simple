@@ -9,32 +9,34 @@
 
   .archives {
     .archive {
-      .date {
-        position: relative;
-        padding-left: 20px;
+      .title {
+        text-align: center;
+        // position: relative;
+        // padding-left: 20px;
         color: $color-primary;
-        $size: 10px;
+        // $size: 10px;
 
-        &::before {
-          content: '';
-          position: absolute;
-          top: 50%;
-          left: 0px;
-          transform: translateY(-50%);
-          width: $size;
-          height: $size;
-          border-radius: 50%;
-          background-color: $color-primary;
-        }
+        // &::before {
+        //   content: '';
+        //   position: absolute;
+        //   top: 50%;
+        //   left: 0px;
+        //   transform: translateY(-50%);
+        //   width: $size;
+        //   height: $size;
+        //   border-radius: 50%;
+        //   background-color: $color-primary;
+        // }
       }
 
       ul.posts {
         display: flex;
         flex-wrap: wrap;
         padding-left: 0;
-        border: 2px dashed;
-        border-color: transparent transparent transparent $color-primary;
+        // border: 2px dashed;
+        // border-color: transparent transparent transparent $color-primary;
         margin: 0;
+        justify-content: center;
 
         li {
           overflow: hidden;
@@ -52,7 +54,7 @@
               content: none;
             }
 
-            .title {
+            .post-title {
               margin-bottom: 4px;
               overflow: hidden;
               font-size: large;

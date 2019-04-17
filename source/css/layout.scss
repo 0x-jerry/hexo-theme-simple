@@ -22,6 +22,8 @@ body {
     padding: 0 50px;
     margin: $nav-height + 10px auto 0;
     max-width: $simple-content-width;
+    min-height: 500px;
+    position: relative;
   }
 
   .simple-layout-nav {

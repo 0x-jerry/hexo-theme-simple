@@ -27,12 +27,12 @@
   .archives
     each archive in archives
       .archive
-        h2.date
+        h2.title
           | #{archive.title}
         ul.posts
           each post in archive.posts
             li
               a.post(href=url_for(post.path))
-                .title=post.title
+                .post-title=post.title
                 .meta=post.date.format(config.date_format)
 
