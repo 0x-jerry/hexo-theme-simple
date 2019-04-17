@@ -12,12 +12,11 @@
   transition: all $time ease;
 }
 
-@mixin card($normal: 2px, $blur: 10px) {
-  // box-shadow: 0 0 $normal $color-primary;
+@mixin card($normal: 0px, $offset: 4px, $blur: 7px) {
+  box-shadow: 0 0 $normal $color-primary;
   @include transitioned();
 
   &:hover {
-    $offset: 4px;
     box-shadow: 0 $offset $blur
       transparentize($color: $color-primary, $amount: 0.7);
 

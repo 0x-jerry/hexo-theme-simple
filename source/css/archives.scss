@@ -40,7 +40,7 @@
           overflow: hidden;
 
           a.post {
-            @include card();
+            @include card($offset: 2px, $blur: 4px);
 
             display: block;
             padding: 10px;
