@@ -33,4 +33,4 @@ ga:
 cclicense:
   text: 版权声明：本文使用 @license 协议
   # All in lower case
-  cc by-nc: https://creativecommons.org/licenses/by-nc/2.0/deed.zh
+  cc by-nc 4.0: https://creativecommons.org/licenses/by-nc/4.0/deed.zh
