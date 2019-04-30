@@ -11,10 +11,13 @@
 
       if (archive) archive.posts.push(post)
       else archives.push({
+        date,
         title,
         posts: [post],
       })
     })
+
+    archives.sort((a,b) => a.date > b.date? -1: 1)
   } else if(page.tag) {
     const tag = site.tags.findOne({ name: page.tag })
     archives.push({
