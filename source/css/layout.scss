@@ -19,12 +19,10 @@ body {
   $simple-content-width: 900px;
 
   .simple-layout-content {
-    padding: 0 50px 15px;
     margin: $nav-height + 10px auto 0;
     max-width: $simple-content-width;
     min-height: 500px;
     position: relative;
-    background: $color-white;
   }
 
   .simple-layout-nav {
