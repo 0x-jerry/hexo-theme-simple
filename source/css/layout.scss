@@ -11,7 +11,7 @@
 
 body {
   margin: 0 auto;
-  background-color: $color-white;
+  background-color: #f5f5f5;
 
   $nav-width: 220px;
   $nav-height: 60px;
@@ -19,11 +19,12 @@ body {
   $simple-content-width: 900px;
 
   .simple-layout-content {
-    padding: 0 50px;
+    padding: 0 50px 15px;
     margin: $nav-height + 10px auto 0;
     max-width: $simple-content-width;
     min-height: 500px;
     position: relative;
+    background: $color-white;
   }
 
   .simple-layout-nav {
@@ -44,6 +45,7 @@ body {
   }
 
   #post-nav {
+    background: $color-white;
     position: fixed;
     left: calc(50% + 460px);
     top: 70px;

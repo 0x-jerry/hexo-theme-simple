@@ -12,12 +12,13 @@
   transition: all $time ease;
 }
 
-@mixin card($normal: 0px, $offset: 4px, $blur: 7px) {
-  box-shadow: 0 0 $normal $color-primary;
+@mixin card($normal: 0px, $offset: 4px, $blur: 15px) {
+  box-shadow: 0 0 $normal rgba(255, 255, 255, 0);
+  background: $color-white;
   @include transitioned();
 
   &:hover {
-    box-shadow: 0 $offset $blur transparentize($color: $color-primary, $amount: 0.7);
+    box-shadow: 0 $offset $blur transparentize($color: $color-primary, $amount: 0.8);
 
     transform: translateY(-$offset);
   }

@@ -18,6 +18,7 @@
     li {
       opacity: 1;
       margin: 10px 13px;
+      @include card($offset: 2px, $blur: 5px);
 
       a {
         display: block;
@@ -25,7 +26,6 @@
         padding: 10px;
         font-size: 1em;
         padding-left: calc(1.5em + 10px);
-        @include card($offset: 2px, $blur: 2px);
 
         &::before {
           content: '#';

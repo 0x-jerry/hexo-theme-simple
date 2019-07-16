@@ -68,17 +68,12 @@
       display: block;
       width: 100%;
       height: 100%;
-      opacity: 0;
 
       @include transitioned();
 
       &::before,
       &::after {
         content: none;
-      }
-
-      &:hover {
-        opacity: 1;
       }
 
       .text {

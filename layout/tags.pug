@@ -20,8 +20,8 @@
 
   ul.tags
     each tag in tags
-      - percent = (tag.number / maxTagNumber) * 0.5 + 0.5
-      li(style="opacity:" + percent + ';font-size:' + percent + 'em;')
-        a(href=url_for(tag.path))
+      - percent = (tag.number / maxTagNumber) * 0.4 + 0.6
+      li
+        a(href=url_for(tag.path) style="opacity:" + percent + ';font-size:' + percent + 'em;')
           | #{tag.name}(#{tag.number})
 
