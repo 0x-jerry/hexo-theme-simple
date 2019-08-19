@@ -1,5 +1,14 @@
 favicon: favicon/favicon.ico
 
+footer: |
+  <p> Powered by
+    <a class="footer-link" href="https://github.com/cwxyz007/hexo-simple-template" target="_blank" rel="noopener">Simple</a>
+    and
+    <a class="footer-link" href="https://hexo.io" target="_blank" rel="noopener">Hexo</a>
+    , Made By
+    <a class="footer-link" href="https://github.com/cwxyz007" target="_blank" rel="noopener">@Fantasy</a>
+  </p>
+
 # Size: 100x100
 avatar: imgs/avatar.jpg
 
