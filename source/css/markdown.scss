@@ -6,6 +6,11 @@
   overflow: hidden;
   line-height: 1.6em;
 
+  hr {
+    border-color: rgba($color-gray, 0.2);
+    margin: 25px 0;
+  }
+
   img {
     display: block;
     max-width: 95%;
