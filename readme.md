@@ -1,8 +1,6 @@
 # Hexo Theme Simple
 
-## [Live](https://cwxyz007.github.io)
-
-![screen](images/hexo-theme-simple.gif)
+## [Live Demo](https://cwxyz007.github.io)
 
 ## 安装 | Install
 
