@@ -34,7 +34,6 @@ body {
     overflow: hidden;
     background-color: $color-white;
     z-index: 100;
-    pointer-events: none;
     @include transitioned();
 
     &.active {

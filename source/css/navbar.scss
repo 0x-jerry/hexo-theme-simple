@@ -1,7 +1,7 @@
 @import "./base.scss";
 @import "./mixin/common.scss";
 
-.simple-sidebar {
+.simple-navbar {
   display: flex;
   height: 100%;
   align-items: center;
@@ -45,12 +45,20 @@
   }
 
   .info {
+    display: inline-block;
+    padding-left: 10px;
+
     .author,
     .subtitle {
       font-size: small;
       margin: 5px 0;
+    }
 
-      @include transitioned();
+    &:hover {
+      .author,
+      .subtitle {
+        color: $color-primary;
+      }
     }
   }
 

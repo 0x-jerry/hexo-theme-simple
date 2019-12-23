@@ -1,9 +1,9 @@
-.simple-sidebar
+.simple-navbar
   .avatar
     a(href=config.root)
       img(src=url_for(theme.avatar), alt="", srcset="")
 
-  .info
+  a.info(href=config.root)
     h3.author= config.author
     small.subtitle= config.subtitle
 
