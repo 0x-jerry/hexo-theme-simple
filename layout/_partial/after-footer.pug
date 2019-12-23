@@ -4,6 +4,19 @@ script(src="/js/jqueryPlugins/fancyImg.js")
 script(src="/js/global.js")
 script(src="/js/navbar.js")
 script(src="/js/post.js")
-
 if theme.sw
   script(src="/js/registerSW.js")
+
+if theme.ga.active
+  script(async="",src="https://www.googletagmanager.com/gtag/js?id=" + theme.ga.id)
+  script.
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    var metas = document.getElementsByTagName('meta');
+    var gaMeta = Array.from(metas).find((meta) => meta.name === 'ga');
+
+    gaMeta && gtag('config', gaMeta.content);
