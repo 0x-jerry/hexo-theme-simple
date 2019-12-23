@@ -15,10 +15,10 @@ head
 
   link(rel="icon", href=url_for(theme.favicon))
   link(rel="stylesheet", href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css")
-  link(rel="stylesheet", href=config.root + "fonts/fonts.css")
-  link(rel="stylesheet", href=config.root + "css/layout.css")
+  link(rel="stylesheet", href="/fonts/fonts.css")
+  link(rel="stylesheet", href="/css/layout.css")
   if theme.ga.active
     script(async, src="https://www.googletagmanager.com/gtag/js?id=UA-101492756-1")
-    script(src=config.root + "js/ga.js")
+    script(src="/js/ga.js")
 
   title=title

@@ -1,13 +1,19 @@
 {
   "name": "simple",
   "version": "1.0.0",
-  "description": "hexo template",
+  "description": "Hexo theme.",
+  "scripts": {
+    "generate:ws": "node ./generator/WSGenerator.js"
+  },
   "author": "cwxyz",
   "license": "MIT",
   "dependencies": {
-    "jquery": "^3.4.0",
-    "lodash": "^4.17.15",
     "pug": "^2.0.4",
     "sass": "^1.24.0"
+  },
+  "devDependencies": {
+    "jquery": "^3.4.0",
+    "lodash": "^4.17.15",
+    "generate-service-worker": "^2.0.3"
   }
 }

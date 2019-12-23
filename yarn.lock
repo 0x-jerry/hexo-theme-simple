@@ -186,6 +186,11 @@ function-bind@^1.1.1:
   resolved "https://registry.npmjs.org/function-bind/-/function-bind-1.1.1.tgz#a56899d3ea3c9bab874bb9773b7c5ede92f4895d"
   integrity sha512-yIovAzMX49sF8Yl58fSCWJ5svSLuaibPxXQJFLmBObTuCr0Mf1KiPopGM9NiFjiYBCbfaa2Fh6breQ6ANVTI0A==
 
+generate-service-worker@^2.0.3:
+  version "2.0.3"
+  resolved "https://registry.npmjs.org/generate-service-worker/-/generate-service-worker-2.0.3.tgz#00b81d8a6f0b7d9c74022be48f8c2ddfa0311a3e"
+  integrity sha512-/7ELWeGdS/JgxUCY+ybersLCjAP8sCS/y4Wbww0gkwAYFpCVuitE+tqQRNY+a7eTNLZQ7+9LNq0GQRCy7f2lwg==
+
 glob-parent@~5.1.0:
   version "5.1.0"
   resolved "https://registry.npmjs.org/glob-parent/-/glob-parent-5.1.0.tgz#5f4c1d1e748d30cd73ad2944b3577a81b081e8c2"
