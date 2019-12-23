@@ -4,4 +4,6 @@ script(src="/js/jqueryPlugins/fancyImg.js")
 script(src="/js/global.js")
 script(src="/js/navbar.js")
 script(src="/js/post.js")
-script(src="/js/registerSW.js")
+
+if theme.sw
+  script(src="/js/registerSW.js")
