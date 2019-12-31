@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Hexo theme.",
   "scripts": {
-    "generate:ws": "node ./generator/WSGenerator.js"
+    "generate:sw": "node ./generator/SWGenerator.js"
   },
   "author": "cwxyz",
   "license": "MIT",
