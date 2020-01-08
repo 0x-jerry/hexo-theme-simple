@@ -20,3 +20,16 @@ if theme.ga.active
     var gaMeta = Array.from(metas).find((meta) => meta.name === 'ga');
 
     gaMeta && gtag('config', gaMeta.content);
+
+  if theme.ba.active
+    script.
+      var metas = document.getElementsByTagName('meta');
+      var baMeta = Array.from(metas).find((meta) => meta.name === 'ba');
+
+      var _hmt = _hmt || [];
+      (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?" + baMeta.content;
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();

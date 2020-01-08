@@ -15,7 +15,7 @@
           = __(`${name.toLowerCase()}.title`)
 
   .links
-    each link, name in theme.links
+    each link, name in theme.links || {}
       span.item
         a(href=link.link target='_blank' rel="noopener")
           i.fa(class="fa-" + link.icon)

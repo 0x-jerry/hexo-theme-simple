@@ -26,17 +26,15 @@ menu:
 
 # Icon use fontawesome class
 links:
-  Github:
-    link: https://github.com/cwxyz007
-    icon: github
-  Email:
-    link: mailto:x.li.gem@gmail.com
-    icon: envelope
+#   Github:
+#     link: https://github.com/cwxyz007
+#     icon: github
+#   Email:
+#     link: mailto:x.li.gem@gmail.com
+#     icon: envelope
 
-# Google analytics
-ga:
-  active: true
-  id: "UA-101492756-1"
+# Service worker
+sw: true
 
 # Creative commons license
 cclicense:
@@ -44,5 +42,12 @@ cclicense:
   # All in lower case
   cc by-nc 4.0: https://creativecommons.org/licenses/by-nc/4.0/deed.zh
 
-# Service worker
-sw: true
+# Google analytics
+ga:
+  active: false
+  id: ""
+
+# Baidu analytics
+ba:
+  active: false
+  id: ""
