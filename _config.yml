@@ -50,4 +50,9 @@ ga:
 # Baidu analytics
 ba:
   active: false
+  # Example for get id:
+  # ```js
+  # hm.src = "https://hm.baidu.com/hm.js?044e5dc9f3bc0a3b3042d15a4bbd8cae";
+  # ```
+  # The id is 044e5dc9f3bc0a3b3042d15a4bbd8cae
   id: ""
