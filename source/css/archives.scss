@@ -1,4 +1,4 @@
-@import './mixin/common.scss';
+@import "./mixin/common.scss";
 
 .simple-archives {
   .title {
@@ -10,6 +10,7 @@
   .archives {
     .archive {
       .title {
+        padding-left: 0.5em;
         color: $color-primary;
       }
 
@@ -37,24 +38,15 @@
 
             .post-title {
               margin-bottom: 4px;
-              overflow: hidden;
               font-size: large;
               font-weight: bold;
-              text-overflow: ellipsis;
-              white-space: nowrap;
+
+              @include text-ellipsis();
             }
           }
         }
-      }
-    }
-  }
-}
 
-@media (max-width: 500px) {
-  .simple-archives {
-    .archives {
-      .archive {
-        ul.posts {
+        @media (max-width: 500px) {
           flex-direction: column;
 
           li {

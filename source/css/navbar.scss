@@ -74,22 +74,22 @@
       margin-right: 3px;
     }
   }
-}
 
-@media (max-width: 700px) {
-  .links {
-    display: none;
-  }
-}
-
-@media (max-width: 600px) {
-  .avatar,
-  .info,
-  .links {
-    display: none;
+  @media (max-width: 700px) {
+    .links {
+      display: none;
+    }
   }
 
-  .menu {
-    margin-left: 0 !important;
+  @media (max-width: 600px) {
+    .avatar,
+    .info,
+    .links {
+      display: none;
+    }
+
+    .menu {
+      margin-left: 0 !important;
+    }
   }
 }

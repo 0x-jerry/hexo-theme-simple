@@ -1,13 +1,13 @@
-@import './global.scss';
-@import './index.scss';
-@import './post.scss';
-@import './navbar.scss';
-@import './markdown.scss';
-@import './footer.scss';
-@import './tags.scss';
-@import './archives.scss';
-@import './mixin/common.scss';
-@import './base.scss';
+@import "./global.scss";
+@import "./index.scss";
+@import "./post.scss";
+@import "./navbar.scss";
+@import "./markdown.scss";
+@import "./footer.scss";
+@import "./tags.scss";
+@import "./archives.scss";
+@import "./mixin/common.scss";
+@import "./base.scss";
 
 body {
   margin: 0 auto;
@@ -59,23 +59,20 @@ body {
   .simple-mobile-nav {
     display: none;
   }
-}
 
-@media (max-width: 1360px) {
-  body {
+  @media (max-width: 1360px) {
     #post-nav {
       display: none;
     }
   }
-}
 
-@media (max-width: 800px) {
-  body {
+  @media (max-width: 800px) {
     font-size: 12px;
 
     .simple-layout-content {
       padding: 0;
-      margin-top: 50px;
+      margin-top: 60px;
+
       .simple-index {
         padding-top: 0;
       }
