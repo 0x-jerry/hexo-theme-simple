@@ -1,3 +1,4 @@
+import $ from 'jquery'
 ;($ => {
   $.fn.fancyImg = function() {
     this.each((index, ele) => {
@@ -15,7 +16,7 @@
 
     return this
   }
-})(jQuery)
+})($)
 
 function getFancyBox($img) {
   const $box = $('<div> </div>')
