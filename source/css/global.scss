@@ -19,8 +19,7 @@ a {
   text-decoration: unset;
   border: none;
   cursor: pointer;
-
-  @include transitioned();
+  transition: 0.2s ease color;
 
   &::before,
   &::after {
@@ -61,7 +60,8 @@ div {
 }
 
 body {
-  font-family: 'Microsoft YaHei', 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Microsoft YaHei', 'Source Sans Pro', 'Helvetica Neue', Arial,
+    sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 

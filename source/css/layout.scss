@@ -8,6 +8,7 @@
 @import "./archives.scss";
 @import "./mixin/common.scss";
 @import "./base.scss";
+@import "../fonts/fonts.css";
 
 body {
   margin: 0 auto;
@@ -34,7 +35,6 @@ body {
     overflow: hidden;
     background-color: $color-white;
     z-index: 100;
-    @include transitioned();
 
     &.active {
       box-shadow: 0 0 3px $color-primary;

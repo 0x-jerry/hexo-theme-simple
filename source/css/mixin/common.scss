@@ -8,18 +8,11 @@
   white-space: nowrap;
 }
 
-@mixin transitioned($time: 0.2s, $prop: all) {
-  transition: all $time ease;
-
-  @media (max-width: 500px) {
-    transition: none;
-  }
-}
-
 @mixin card($normal: 0px, $offset: 4px, $blur: 15px) {
   box-shadow: 0 0 $normal rgba(255, 255, 255, 0);
   background: $color-white;
-  @include transitioned();
+  transition: 0.2s ease;
+  transition-property: box-shadow, transform;
 
   &:hover {
     box-shadow: 0 $offset $blur

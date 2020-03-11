@@ -1,11 +1,11 @@
 .simple-navbar
-  .avatar
-    a(href=config.root)
-      img(src=url_for(theme.avatar), alt="", srcset="")
+  .avatar-box
+    a.avatar-img(href=config.root)
+        img(src=url_for(theme.avatar), alt="", srcset="")
 
-  a.info(href=config.root)
-    h3.author= config.author
-    small.subtitle= config.subtitle
+    a.info(href=config.root)
+      h3.author= config.author
+      small.subtitle= config.subtitle
 
   .menu
     each value, name in theme.menu
