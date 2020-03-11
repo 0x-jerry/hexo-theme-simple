@@ -1,4 +1,3 @@
-import $ from 'jquery'
 ;($ => {
   $.fn.fancyImg = function() {
     this.each((index, ele) => {
@@ -10,7 +9,7 @@ import $ from 'jquery'
 
         const $box = getFancyBox($img)
         $('body').append($box)
-        $box.fadeIn()
+        $box.show()
       })
     })
 
@@ -22,9 +21,8 @@ function getFancyBox($img) {
   const $box = $('<div> </div>')
 
   const hideBox = () => {
-    $box.fadeOut(() => {
-      $box.remove()
-    })
+    $box.hide()
+    $box.remove()
   }
 
   $box.css({

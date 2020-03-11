@@ -1,4 +1,4 @@
-const { tarser } = require('rollup-plugin-terser')
+const { terser } = require('rollup-plugin-terser')
 const babel = require('rollup-plugin-babel')
 const nodeResolve = require('@rollup/plugin-node-resolve')
 const commonjs = require('@rollup/plugin-commonjs')
@@ -20,7 +20,7 @@ module.exports = {
         file: resolve('source/js/index.js'),
         format: 'iife',
         sourcemap: true,
-        plugins: [tarser()]
+        plugins: [terser()]
       },
   plugins: [nodeResolve(), commonjs(), babel()]
 }

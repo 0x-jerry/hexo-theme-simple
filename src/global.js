@@ -1,9 +1,8 @@
-import $ from 'jquery'
+import throttle from 'lodash/throttle'
 
-console.log($)
 $(document).ready(() => {
   $(window).scroll(
-    _.throttle(() => {
+    throttle(() => {
       const top = $(window).scrollTop()
       if (top < 5) {
         $('nav').removeClass('active')

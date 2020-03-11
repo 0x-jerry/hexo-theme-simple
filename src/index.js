@@ -1,7 +1,6 @@
-import 'jquery'
-import 'lodash'
+import 'zepto'
 
+import './fancyImg'
 import './global'
 import './navbar'
 import './post'
-import './jqueryPlugins/fancyImg'
