@@ -1,9 +1,9 @@
-@import "../base.scss";
+@import '../base.scss';
 
 @mixin code-style() {
-  font-family: "Fira Code", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Fira Code', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 14px;
-  font-feature-settings: "calt" 1; /* Enable ligatures for IE 10+, Edge */
+  font-feature-settings: 'calt' 1; /* Enable ligatures for IE 10+, Edge */
   text-rendering: optimizeLegibility; /* Force ligatures for Webkit, Blink, Gecko */
   white-space: nowrap;
 }

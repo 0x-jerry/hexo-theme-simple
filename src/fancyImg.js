@@ -38,25 +38,21 @@ function getFancyBox($img) {
     height: '100%',
     overflow: 'auto',
     backgroundColor: 'rgba(0, 0, 0, 0.5)',
-    zIndex: 1000
+    zIndex: 1000,
+    cursor: 'zoom-out'
   })
 
-  $box.click(e => {
-    if (e.currentTarget === e.target) hideBox()
-  })
+  $box.click(e => e.currentTarget === e.target && hideBox())
 
   $($img).css({
     position: 'relative',
     top: '50%',
     transform: 'translateY(-50%)',
-    padding: '0 20px',
     margin: '0 auto',
     maxWidth: '80%',
     maxHeight: '80%',
     display: 'block',
-    objectFit: 'contain',
-    width: 'fit-content',
-    height: 'fit-content'
+    cursor: 'default'
   })
 
   $box.append($img)
