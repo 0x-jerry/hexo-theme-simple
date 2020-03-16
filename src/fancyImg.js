@@ -20,6 +20,10 @@
 function getFancyBox($img) {
   const $box = $('<div> </div>')
 
+  $box.on('scroll', e => e.preventDefault())
+
+  $box.on('wheel', e => e.preventDefault())
+
   const hideBox = () => {
     $box.hide()
     $box.remove()
@@ -37,35 +41,24 @@ function getFancyBox($img) {
     zIndex: 1000
   })
 
-  const $content = $('<div> </div>')
-  $content.css({
-    position: 'relative',
-    top: '50%',
-    transform: 'translateY(-50%)',
-    padding: '0 20px',
-    margin: '0 auto',
-    width: 'fit-content',
-    maxWidth: '80%',
-    maxHeight: '80%',
-    overflow: 'auto'
-  })
-
   $box.click(e => {
     if (e.currentTarget === e.target) hideBox()
   })
 
   $($img).css({
+    position: 'relative',
+    top: '50%',
+    transform: 'translateY(-50%)',
+    padding: '0 20px',
+    margin: '0 auto',
+    maxWidth: '80%',
+    maxHeight: '80%',
     display: 'block',
     objectFit: 'contain',
-    width: '100%',
-    height: '100%'
+    width: 'fit-content',
+    height: 'fit-content'
   })
 
-  $img.click(e => {
-    if (e.currentTarget === e.target) hideBox()
-  })
-
-  $content.append($img)
-  $box.append($content)
+  $box.append($img)
   return $box
 }
