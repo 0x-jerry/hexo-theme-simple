@@ -30,7 +30,7 @@
         transform: rotate(360deg);
       }
       .info {
-        color: $color-primary;
+        color: $color-font-primary;
       }
     }
   }
@@ -41,7 +41,7 @@
     height: $size;
     border-radius: 50%;
     overflow: hidden;
-    transition: 0.4s ease transform;
+    transition: 0.2s ease transform;
 
     img {
       width: 100%;
@@ -62,7 +62,7 @@
     &:hover {
       .author,
       .subtitle {
-        color: $color-primary;
+        color: $color-font-primary;
       }
     }
   }

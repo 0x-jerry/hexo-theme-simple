@@ -5,28 +5,7 @@
   font-size: 14px;
   font-feature-settings: 'calt' 1; /* Enable ligatures for IE 10+, Edge */
   text-rendering: optimizeLegibility; /* Force ligatures for Webkit, Blink, Gecko */
-  white-space: nowrap;
-}
-
-@mixin card($normal: 0px, $offset: 4px, $blur: 15px) {
-  box-shadow: 0 0 $normal rgba(255, 255, 255, 0);
-  background: $color-white;
-  transition: 0.2s ease;
-  transition-property: box-shadow, transform;
-
-  &:hover {
-    box-shadow: 0 $offset $blur
-      transparentize($color: $color-primary, $amount: 0.8);
-
-    transform: translateY(-$offset);
-  }
-
-  @media (max-width: 500px) {
-    &:hover {
-      box-shadow: none;
-      transform: none;
-    }
-  }
+  // white-space: nowrap;
 }
 
 @mixin center() {
@@ -39,4 +18,35 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+.card {
+  box-shadow: 0 0 0 rgba(255, 255, 255, 0);
+  background: $color-background;
+  transition: 0.2s ease;
+  transition-property: box-shadow, transform;
+
+  &:hover {
+    box-shadow: 0 4px 15px $color-primary-light;
+    transform: translateY(-4px);
+  }
+}
+
+html[theme='dark'] {
+  .card {
+    &:hover {
+      box-shadow: 0 4px 15px $color-background;
+      transform: translateY(-4px);
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  html[theme='dark'] .card,
+  .card {
+    &:hover {
+      box-shadow: none;
+      transform: none;
+    }
+  }
 }

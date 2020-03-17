@@ -7,8 +7,6 @@
   margin: 0 auto;
 
   .article-excerpt {
-    @include card();
-
     position: relative;
     display: block;
     padding: 20px 50px;
@@ -33,9 +31,10 @@
         margin-right: 3px;
         border-radius: 3px;
         background-color: $color-primary;
-        color: $color-white;
+        color: $color-background;
+
         a {
-          color: $color-white;
+          color: $color-background;
           border: none;
 
           &::before,
@@ -54,6 +53,7 @@
 
     .more {
       text-align: center;
+      color: $color-font-reverse;
     }
 
     .excerpt-link {
@@ -75,8 +75,8 @@
         right: 0;
         padding: 20px 40px;
         margin: 0;
-        color: $color-white;
-        background-color: lighten($color: $color-primary, $amount: 20);
+        color: $color-background;
+        background-color: $color-primary-light;
 
         &:hover {
           background-color: $color-primary;
@@ -103,10 +103,10 @@
             margin-right: 7px;
 
             a {
-              color: lighten($color: $color-primary, $amount: 20);
+              opacity: 0.9;
 
               &:hover {
-                color: $color-primary;
+                color: $color-font-primary;
               }
 
               &::before,

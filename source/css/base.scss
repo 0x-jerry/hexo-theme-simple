@@ -1,3 +1,40 @@
-$color-primary: #fc5136;
-$color-white: #fff;
-$color-gray: #3e3e3e;
+html {
+  --theme-primary: #fc705a;
+  --theme-primary-light: #ffc7be;
+
+  --theme-background: #ffffff;
+  --theme-background-light: #efefef;
+
+  --theme-gray: #3e3e3e;
+
+  --theme-font: #3e3e3e;
+  --theme-font-reverse: #ffffff;
+  --theme-font-primary: #fd3c2b;
+
+  //dark theme
+  &[theme='dark'] {
+    --theme-primary: #fc705a;
+    --theme-primary-light: #ffc7be;
+
+    --theme-background: #252525;
+    --theme-background-light: #333333;
+
+    --theme-gray: #c7c7c7;
+
+    --theme-font: #c7c7c7;
+    --theme-font-reverse: #000000;
+    --theme-font-primary: #fd3c2b;
+  }
+}
+
+$color-primary: var(--theme-primary);
+$color-primary-light: var(--theme-primary-light);
+
+$color-background: var(--theme-background);
+$color-background-light: var(--theme-background-light);
+
+$color-gray: var(--theme-gray);
+
+$color-font: var(--theme-font);
+$color-font-reverse: var(--theme-font-reverse);
+$color-font-primary: var(--theme-font-primary);

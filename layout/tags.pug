@@ -21,7 +21,7 @@
   ul.tags
     each tag in tags
       - percent = (tag.number / maxTagNumber) * 0.4 + 0.6
-      li
+      li.card
         a(href=url_for(tag.path) style="opacity:" + percent + ';font-size:' + percent + 'em;')
           | #{tag.name}(#{tag.number})
 

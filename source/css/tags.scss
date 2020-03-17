@@ -18,7 +18,6 @@
     li {
       opacity: 1;
       margin: 10px 13px;
-      @include card($offset: 2px, $blur: 5px);
 
       a {
         display: block;

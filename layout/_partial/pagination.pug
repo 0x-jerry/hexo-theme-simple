@@ -4,10 +4,10 @@
   ul
     if currentPage.prev
       li.prev
-        a(href=config.root+currentPage.prev_link)
+        a.card(href=config.root+currentPage.prev_link)
           = __('pagination.prev')
 
     if currentPage.next
       li.next
-        a(href=config.root+currentPage.next_link)
+        a.card(href=config.root+currentPage.next_link)
           = __('pagination.next')

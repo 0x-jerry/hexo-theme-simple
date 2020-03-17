@@ -12,7 +12,6 @@
 
 body {
   margin: 0 auto;
-  background-color: #f5f5f5;
 
   $nav-width: 220px;
   $nav-height: 60px;
@@ -33,7 +32,8 @@ body {
     width: 100%;
     height: $nav-height;
     overflow: hidden;
-    background-color: $color-white;
+    background-color: $color-background;
+
     z-index: 100;
 
     &.active {
@@ -42,7 +42,7 @@ body {
   }
 
   #post-nav {
-    background: $color-white;
+    background: $color-background;
     position: fixed;
     left: calc(50% + 460px);
     top: 70px;

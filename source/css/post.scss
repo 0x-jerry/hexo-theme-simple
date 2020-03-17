@@ -2,7 +2,7 @@
 
 .simple-post {
   padding: 1px 50px 15px;
-  background: $color-white;
+  background: $color-background;
 
   .post-meta {
     .meta {
@@ -12,9 +12,10 @@
       margin-right: 3px;
       border-radius: 3px;
       background-color: $color-primary;
-      color: $color-white;
+      color: $color-font-reverse;
+
       a {
-        color: $color-white;
+        color: $color-font-reverse;
         border: none;
 
         &::before,

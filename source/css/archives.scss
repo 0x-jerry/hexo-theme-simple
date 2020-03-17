@@ -11,7 +11,7 @@
     .archive {
       .title {
         padding-left: 0.5em;
-        color: $color-primary;
+        color: $color-font-primary;
       }
 
       ul.posts {
@@ -22,14 +22,11 @@
 
         li {
           overflow: hidden;
-          margin: 6px;
+          padding: 6px;
 
           a.post {
-            @include card($offset: 2px, $blur: 4px);
-
             display: block;
             padding: 10px 20px;
-            box-shadow: 0 0 0 transparent;
 
             &::before,
             &::after {
