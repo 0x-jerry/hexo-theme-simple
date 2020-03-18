@@ -10,6 +10,8 @@ window.addEventListener('load', () => {
 
   if (metadata.sw === 'true') {
     registerSW()
+  } else {
+    unregisterSW()
   }
 
   if (metadata.ga) {
