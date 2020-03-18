@@ -21,6 +21,7 @@
 
   .avatar-box {
     display: flex;
+    margin-right: 10px;
 
     &:hover {
       .avatar-img {
@@ -89,6 +90,16 @@
     .info,
     .links {
       display: none;
+    }
+
+    .avatar-img {
+      $size: 30px;
+      width: $size;
+      height: $size;
+    }
+
+    .avatar-box {
+      margin-right: 10px;
     }
 
     .menu {
