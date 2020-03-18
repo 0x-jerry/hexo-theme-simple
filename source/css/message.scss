@@ -1,0 +1,59 @@
+.message {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  background: $color-background;
+  padding: 10px 20px;
+  min-width: 200px;
+  transition: transform 0.2s ease;
+  transform: translateX(120%);
+
+  &.active {
+    transform: translateX(0);
+  }
+
+  &-closeBtn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translate(50%, -50%);
+
+    &::before,
+    &::after {
+      content: none;
+    }
+  }
+
+  &-title {
+    //1
+  }
+
+  &-btns {
+    margin-top: 20px;
+    text-align: right;
+  }
+
+  &-btn {
+    border: none;
+    background: $color-primary;
+    color: $color-font-reverse;
+    padding: 5px 10px;
+    margin-left: 5px;
+    outline: none;
+    cursor: pointer;
+
+    &.message-btn-plain {
+      box-sizing: border-box;
+      border: 1px solid $color-primary;
+      background: $color-background;
+      color: $color-font;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .message {
+    display: none;
+  }
+}

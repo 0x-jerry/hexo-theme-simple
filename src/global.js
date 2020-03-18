@@ -1,6 +1,11 @@
 import throttle from 'lodash/throttle'
+import { configs } from './config'
 
 window.addEventListener('load', () => {
+  console.log(
+    `${configs.debug ? 'Development' : 'Production'} ${configs.version}`
+  )
+
   $(window).scroll(
     throttle(() => {
       const top = $(window).scrollTop()

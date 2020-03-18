@@ -11,6 +11,14 @@ head
   meta(name="viewport", content="width=device-width, initial-scale=1")
   meta(http-equiv="XUA_Compatible", content="IE=edge")
 
+  if theme.sw
+    meta(name="sw", content='true')
+  if theme.ga.active
+    meta(name="ga", content=theme.ga.id)
+  if theme.ba.active
+    meta(name="ba", content=theme.ba.id)
+
+
   link(rel="icon", href=url_for(theme.favicon))
   link(rel="stylesheet", href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css")
   link(rel="stylesheet", href="/css/layout.css")

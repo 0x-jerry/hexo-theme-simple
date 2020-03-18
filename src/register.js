@@ -4,6 +4,7 @@ window.addEventListener('load', () => {
   const metadata = getMeta()
 
   if (configs.debug) {
+    unregisterSW()
     return
   }
 
@@ -52,6 +53,18 @@ function registerGa(gaId) {
   gtag('config', gaId)
 }
 
+async function unregisterSW() {
+  if (!navigator.serviceWorker) {
+    return
+  }
+
+  const sws = await navigator.serviceWorker.getRegistrations()
+
+  for (const sw of sws) {
+    sw.unregister()
+  }
+}
+
 async function registerSW() {
   if (!navigator.serviceWorker) {
     return
@@ -60,6 +73,21 @@ async function registerSW() {
   const worker = await navigator.serviceWorker.register('/ws.js')
 
   worker.onupdatefound = ev => {
-    console.log('update found', ev)
+    $.message('检查到更新，请刷新重新访问', [
+      {
+        text: '刷新',
+        click(e, $tool) {
+          $tool.close()
+          location.reload()
+        }
+      },
+      {
+        text: '关闭',
+        type: 'plain',
+        click() {
+          console.log('click')
+        }
+      }
+    ])
   }
 }

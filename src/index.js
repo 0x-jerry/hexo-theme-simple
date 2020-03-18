@@ -1,6 +1,6 @@
 import 'zepto'
 
-import './fancyImg'
+import './zeptoExtends'
 import './global'
 import './navbar'
 import './post'

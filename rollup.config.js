@@ -1,5 +1,6 @@
 const { terser } = require('rollup-plugin-terser')
 const replace = require('@rollup/plugin-replace')
+const json = require('@rollup/plugin-json')
 const babel = require('rollup-plugin-babel')
 const nodeResolve = require('@rollup/plugin-node-resolve')
 const commonjs = require('@rollup/plugin-commonjs')
@@ -24,6 +25,7 @@ module.exports = {
         plugins: [terser()]
       },
   plugins: [
+    json(),
     replace({
       'process.env.NODE_ENV': isDev ? '"development"' : '"production"'
     }),
