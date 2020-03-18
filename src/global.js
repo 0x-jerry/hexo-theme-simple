@@ -1,6 +1,6 @@
 import throttle from 'lodash/throttle'
 
-$(document).ready(() => {
+window.addEventListener('load', () => {
   $(window).scroll(
     throttle(() => {
       const top = $(window).scrollTop()

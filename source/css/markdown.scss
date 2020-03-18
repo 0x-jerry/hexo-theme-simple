@@ -14,6 +14,7 @@
     max-width: 95%;
     margin: 5px auto;
     cursor: zoom-in;
+    box-shadow: 0 0 10px 0px $color-primary-light;
   }
 
   h1,
@@ -179,7 +180,13 @@
 }
 
 html[theme='dark'] {
-  td.gutter {
-    background: $color-background-light;
+  .markdown-content {
+    td.gutter {
+      background: $color-background-light;
+    }
+
+    img {
+      box-shadow: 0 0 10px 0px $color-background-light;
+    }
   }
 }
