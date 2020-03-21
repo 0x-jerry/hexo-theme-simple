@@ -11,7 +11,20 @@ html {
   --theme-font-reverse: #ffffff;
   --theme-font-primary: #fd3c2b;
 
-  //dark theme
+  @media (prefers-color-scheme: dark) {
+    --theme-primary: #fc705a;
+    --theme-primary-light: #ffc7be;
+
+    --theme-background: #252525;
+    --theme-background-light: #333333;
+
+    --theme-gray: #c7c7c7;
+
+    --theme-font: #c7c7c7;
+    --theme-font-reverse: #000000;
+    --theme-font-primary: #fd3c2b;
+  }
+
   &[theme='dark'] {
     --theme-primary: #fc705a;
     --theme-primary-light: #ffc7be;

@@ -39,6 +39,15 @@ html[theme='dark'] {
   }
 }
 
+@media (prefers-color-scheme: dark) {
+  .card {
+    &:hover {
+      box-shadow: 0 4px 15px $color-background;
+      transform: translateY(-4px);
+    }
+  }
+}
+
 @media (max-width: 500px) {
   html[theme='dark'] .card,
   .card {
