@@ -50,6 +50,12 @@ function createCss(isDark = false) {
   $link.href = hljsCss
   $link.media = 'all'
 
+  if (window.$themeLink) {
+    window.$themeLink.remove()
+  }
+
+  window.$themeLink = $link
+
   $('head').append($link)
 }
 
