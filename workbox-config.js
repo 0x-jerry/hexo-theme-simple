@@ -7,7 +7,7 @@ module.exports = {
   skipWaiting: true,
   runtimeCaching: [
     {
-      urlPattern: /\.(?:png|jpg|jpeg|svg|js|css)$/,
+      urlPattern: /\.(?:png|jpg|jpeg|svg|js|css|woff2|woff)$/,
       handler: 'StaleWhileRevalidate'
     }
   ]
