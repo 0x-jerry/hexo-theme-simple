@@ -1,6 +1,6 @@
 module.exports = {
   // globDirectory: './dist/',
-  // globPatterns: ['**/*.{html,js}'],
+  // globPatterns: ['**/*.{html,js,css,gif,woff2,woff}'],
   swDest: './source/sw.js',
   cleanupOutdatedCaches: true,
   clientsClaim: true,
@@ -8,6 +8,10 @@ module.exports = {
   runtimeCaching: [
     {
       urlPattern: /\.(?:png|jpg|jpeg|svg|js|css|woff2|woff)$/,
+      handler: 'StaleWhileRevalidate'
+    },
+    {
+      urlPattern: /https:\/\/cdn\.bootcss\.com/,
       handler: 'StaleWhileRevalidate'
     }
   ]
