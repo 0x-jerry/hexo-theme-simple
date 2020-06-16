@@ -1,10 +1,10 @@
-const { terser } = require('rollup-plugin-terser')
-const replace = require('@rollup/plugin-replace')
-const json = require('@rollup/plugin-json')
-const babel = require('rollup-plugin-babel')
-const nodeResolve = require('@rollup/plugin-node-resolve')
-const commonjs = require('@rollup/plugin-commonjs')
-const path = require('path')
+import { terser } from 'rollup-plugin-terser'
+import babel from 'rollup-plugin-babel'
+import replace from '@rollup/plugin-replace'
+import json from '@rollup/plugin-json'
+import nodeResolve from '@rollup/plugin-node-resolve'
+import commonjs from '@rollup/plugin-commonjs'
+import path from 'path'
 
 const resolve = (...args) => path.join(__dirname, ...args)
 
