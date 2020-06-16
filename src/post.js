@@ -1,3 +1,6 @@
+import Firement from 'firement'
+import { getMeta } from './utils'
+
 const HEADER_HEIGHT = 60
 
 $(document).ready(() => {
@@ -9,7 +12,36 @@ $(document).ready(() => {
   if ($pageNav[0]) generateTOC($pageNav, $postContent)
 
   syncTOC($(window))
+
+  generateComment()
 })
+
+function generateComment() {
+  const $comment = document.getElementById('post-comment')
+  const metas = getMeta()
+
+  if (!$comment || !metas['comment.apiKey']) {
+    return
+  }
+
+  const firebaseConfig = {
+    apiKey: metas['comment.apiKey'],
+    authDomain: metas['comment.authDomain'],
+    databaseURL: metas['comment.databaseURL'],
+    projectId: metas['comment.projectId'],
+    storageBucket: metas['comment.storageBucket'],
+    messagingSenderId: metas['comment.messagingSenderId'],
+    appId: metas['comment.appId'],
+  }
+
+  Firement(
+    {
+      db: firebaseConfig,
+      article: location.pathname.replace(/\//g, '-'),
+    },
+    $comment
+  )
+}
 
 function syncTOC($content) {
   const $elements = $('#post-content').find('h1, h2, h3, h4, h5, h6')
@@ -27,9 +59,7 @@ function syncTOC($content) {
 
     if (mark != -1) {
       const $lis = $('#post-nav').find('a')
-      const ele = $('#post-nav')
-        .find('a')
-        .get(mark)
+      const ele = $('#post-nav').find('a').get(mark)
       const $ele = $(ele)
 
       $lis.removeClass('hover')
@@ -42,7 +72,7 @@ function syncTOC($content) {
 }
 
 function getTOC($content) {
-  const getChildTOC = list => {
+  const getChildTOC = (list) => {
     const level = list.node.level + 1
 
     for (let index = 0; index < list.children.length; index++) {
@@ -72,24 +102,24 @@ function getTOC($content) {
       text,
       href: text
         .split(/[\s.*+?^=!:${}()|[\]/\\]+/)
-        .filter(item => item !== '')
-        .join('-')
+        .filter((item) => item !== '')
+        .join('-'),
     }
 
     if (preLevel === level) {
       list.push({
         node,
-        children: []
+        children: [],
       })
     } else {
       list[list.length - 1].children.push({
         node,
-        children: []
+        children: [],
       })
     }
   })
 
-  list.forEach(child => {
+  list.forEach((child) => {
     getChildTOC(child)
   })
 
@@ -97,10 +127,10 @@ function getTOC($content) {
 }
 
 function generateTOC($pageNav, $content) {
-  const generate = list => {
+  const generate = (list) => {
     const $ul = $('<ul> </ul>')
 
-    list.forEach(child => {
+    list.forEach((child) => {
       const $li = $('<li> </li>')
 
       const $a = $(`<a>${child.node.text}</a>`)

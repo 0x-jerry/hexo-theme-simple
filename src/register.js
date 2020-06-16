@@ -1,4 +1,5 @@
 import { configs } from './config'
+import { getMeta } from './utils'
 
 window.addEventListener('load', () => {
   const metadata = getMeta()
@@ -23,20 +24,9 @@ window.addEventListener('load', () => {
   }
 })
 
-function getMeta() {
-  const metas = document.getElementsByTagName('meta')
-  const metadata = {}
-
-  for (const meta of metas) {
-    metadata[meta.name] = meta.content
-  }
-
-  return metadata
-}
-
 function registerBa(baId) {
   var _hmt = _hmt || []
-  ;(function() {
+  ;(function () {
     var hm = document.createElement('script')
     hm.src = 'https://hm.baidu.com/hm.js?' + baId
     var s = document.getElementsByTagName('script')[0]
@@ -74,22 +64,22 @@ async function registerSW() {
 
   const worker = await navigator.serviceWorker.register('/sw.js')
 
-  worker.onupdatefound = ev => {
+  worker.onupdatefound = (ev) => {
     $.message('检查到更新，请刷新重新访问', [
       {
         text: '刷新',
         click(e, $tool) {
           $tool.close()
           location.reload()
-        }
+        },
       },
       {
         text: '关闭',
         type: 'plain',
         click() {
           console.log('click')
-        }
-      }
+        },
+      },
     ])
   }
 }

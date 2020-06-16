@@ -45,6 +45,12 @@
     border-top: 1px dashed $color-gray;
   }
 
+  #post-comment {
+    margin-top: 20px;
+    background-color: white;
+    color: #333;
+  }
+
   .post-footer {
     display: flex;
     .post-license {

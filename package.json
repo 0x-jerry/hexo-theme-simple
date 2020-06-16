@@ -10,6 +10,7 @@
   "author": "xliGem",
   "license": "MIT",
   "dependencies": {
+    "firement": "^0.0.3",
     "lodash": "^4.17.15",
     "pug": "^2.0.4",
     "sass": "^1.26.3",

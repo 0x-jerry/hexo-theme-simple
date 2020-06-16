@@ -1,0 +1,8 @@
+.firement-comment {
+  a {
+    &::after,
+    &::before {
+      content: none;
+    }
+  }
+}

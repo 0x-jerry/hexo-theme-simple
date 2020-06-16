@@ -45,7 +45,7 @@ cclicense:
 # Google analytics
 ga:
   active: false
-  id: ""
+  id: ''
 
 # Baidu analytics
 ba:
@@ -55,4 +55,14 @@ ba:
   # hm.src = "https://hm.baidu.com/hm.js?044e5dc9f3bc0a3b3042d15a4bbd8cae";
   # ```
   # The id is 044e5dc9f3bc0a3b3042d15a4bbd8cae
-  id: ""
+  id: ''
+
+comment:
+  active: false
+  apiKey: 'xxx'
+  authDomain: 'xxx.firebaseapp.com'
+  databaseURL: 'https://xxx.firebaseio.com'
+  projectId: 'xxx'
+  storageBucket: 'xxx.appspot.com'
+  messagingSenderId: 'xxx'
+  appId: 'xxx'

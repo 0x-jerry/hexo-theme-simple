@@ -17,10 +17,18 @@ head
     meta(name="ga", content=theme.ga.id)
   if theme.ba.active
     meta(name="ba", content=theme.ba.id)
-
+  if theme.comment.active && theme.comment
+    meta(name="comment.apiKey", content=theme.comment.apiKey)
+    meta(name="comment.authDomain", content=theme.comment.authDomain)
+    meta(name="comment.databaseURL", content=theme.comment.databaseURL)
+    meta(name="comment.projectId", content=theme.comment.projectId)
+    meta(name="comment.storageBucket", content=theme.comment.storageBucket)
+    meta(name="comment.messagingSenderId", content=theme.comment.messagingSenderId)
+    meta(name="comment.appId", content=theme.comment.appId)
 
   link(rel="icon", href=url_for(theme.favicon))
   link(rel="stylesheet", href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css")
+  link(rel="stylesheet", href="https://unpkg.com/firement@0.0.5/dist/style.css")
   link(rel="stylesheet", href="/css/layout.css")
 
   title=title
