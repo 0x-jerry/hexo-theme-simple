@@ -17,7 +17,7 @@ head
     meta(name="ga", content=theme.ga.id)
   if theme.ba.active
     meta(name="ba", content=theme.ba.id)
-  if theme.comment.active && theme.comment
+  if (theme.comment.active && page.comment)
     meta(name="comment.apiKey", content=theme.comment.apiKey)
     meta(name="comment.authDomain", content=theme.comment.authDomain)
     meta(name="comment.databaseURL", content=theme.comment.databaseURL)
