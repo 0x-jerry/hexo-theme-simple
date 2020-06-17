@@ -24,17 +24,22 @@ window.addEventListener('load', () => {
   }
 })
 
+function appendScript(url) {
+  const $el = document.createElement('script')
+  $el.src = url
+  $el.async = true
+  const $body = document.getElementsByTagName('body')[0]
+  $body.append($el)
+}
+
 function registerBa(baId) {
   var _hmt = _hmt || []
-  ;(function () {
-    var hm = document.createElement('script')
-    hm.src = 'https://hm.baidu.com/hm.js?' + baId
-    var s = document.getElementsByTagName('script')[0]
-    s.parentNode.insertBefore(hm, s)
-  })()
+  appendScript('https://hm.baidu.com/hm.js?' + baId)
 }
 
 function registerGa(gaId) {
+  appendScript('https://www.googletagmanager.com/gtag/js?' + gaId)
+
   window.dataLayer = window.dataLayer || []
   function gtag() {
     window.dataLayer.push(arguments)
@@ -71,15 +76,15 @@ async function registerSW() {
         click(e, $tool) {
           $tool.close()
           location.reload()
-        },
+        }
       },
       {
         text: '关闭',
         type: 'plain',
         click() {
           console.log('click')
-        },
-      },
+        }
+      }
     ])
   }
 }

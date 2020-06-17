@@ -31,13 +31,13 @@ function generateComment() {
     projectId: metas['comment.projectId'],
     storageBucket: metas['comment.storageBucket'],
     messagingSenderId: metas['comment.messagingSenderId'],
-    appId: metas['comment.appId'],
+    appId: metas['comment.appId']
   }
 
   Firement(
     {
       db: firebaseConfig,
-      article: location.pathname.replace(/\//g, '-'),
+      article: location.pathname.replace(/\//g, '-')
     },
     $comment
   )
@@ -103,18 +103,18 @@ function getTOC($content) {
       href: text
         .split(/[\s.*+?^=!:${}()|[\]/\\]+/)
         .filter((item) => item !== '')
-        .join('-'),
+        .join('-')
     }
 
     if (preLevel === level) {
       list.push({
         node,
-        children: [],
+        children: []
       })
     } else {
       list[list.length - 1].children.push({
         node,
-        children: [],
+        children: []
       })
     }
   })

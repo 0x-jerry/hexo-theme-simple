@@ -12,18 +12,12 @@ const isDev = process.env.NODE_ENV === 'development'
 
 module.exports = {
   input: resolve('src/index.js'),
-  output: isDev
-    ? {
-        file: resolve('source/js/index.js'),
-        sourcemap: true,
-        format: 'umd'
-      }
-    : {
-        file: resolve('source/js/index.js'),
-        format: 'iife',
-        sourcemap: true,
-        plugins: [terser()]
-      },
+  output: {
+    file: resolve('source/js/index.js'),
+    format: 'iife',
+    sourcemap: true,
+    plugins: isDev ? [] : [terser()]
+  },
   plugins: [
     json(),
     replace({
