@@ -11,7 +11,7 @@
   "license": "MIT",
   "dependencies": {
     "firement": "^0.0.5",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "pug": "^3.0.0",
     "sass": "^1.26.8",
     "zepto": "^1.2.0"
