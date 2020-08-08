@@ -1,5 +1,5 @@
-;($ => {
-  $.fn.fancyImg = function() {
+;(($) => {
+  $.fn.fancyImg = function () {
     this.each((index, ele) => {
       const $ele = $(ele)
       if (!$ele.attr('src')) return
@@ -16,7 +16,7 @@
     return this
   }
 
-  $.message = function(message, buttons) {
+  $.message = function (message, buttons) {
     createMessage(message, buttons)
   }
 })($)
@@ -67,7 +67,7 @@ function createMessage(message, buttons = []) {
     )
 
     if (btn.click) {
-      $btn.click(e => btn.click(e, $tool))
+      $btn.click((e) => btn.click(e, $tool))
     }
 
     $btnsBox.append($btn)
@@ -76,49 +76,92 @@ function createMessage(message, buttons = []) {
   $(document.body).append($msg)
 
   $tool.show()
-  // setTimeout(() => {
-  //   $msg.remove()
-  // }, 1000)
 }
 
 function createFancyBox($img) {
-  const $box = $('<div> </div>')
-
-  $box.on('scroll', e => e.preventDefault())
-
-  $box.on('wheel', e => e.preventDefault())
+  const $box = $('<div class="z-fancy-box"> </div>')
 
   const hideBox = () => {
     $box.hide()
     $box.remove()
   }
 
-  $box.css({
-    position: 'fixed',
-    display: 'none',
-    top: 0,
-    left: 0,
-    width: '100%',
-    height: '100%',
-    overflow: 'auto',
-    backgroundColor: 'rgba(0, 0, 0, 0.5)',
-    zIndex: 1000,
-    cursor: 'zoom-out'
+  $box.click((e) => e.target !== $img[0] && hideBox())
+
+  $($img).addClass('z-fancy-img')
+
+  drag($img, (dx, dy) => {
+    const top = $container.scrollTop() - dy
+    const left = $container.scrollLeft() - dx
+
+    $container.scrollLeft(left)
+    $container.scrollTop(top)
   })
 
-  $box.click(e => e.currentTarget === e.target && hideBox())
+  const $container = $(`<div class="z-fancy-container"></div>`)
+  $container.on('scroll', (e) => e.preventDefault())
 
-  $($img).css({
-    position: 'relative',
-    top: '50%',
-    transform: 'translateY(-50%)',
-    margin: '0 auto',
-    maxWidth: '80%',
-    maxHeight: '80%',
-    display: 'block',
-    cursor: 'default'
+  let factor = 1
+  const unit = -0.001
+  const scale = Scale($img)
+
+  $container.on('wheel', (e) => {
+    e.preventDefault()
+    const raw = e.deltaY + e.deltaX
+
+    factor += unit * raw
+
+    if (factor < 0.1) {
+      factor = 0.1
+    } else if (factor > 1) {
+      factor = 1
+    }
+
+    scale(factor)
   })
 
-  $box.append($img)
+  $img.dblclick(() => {
+    factor = 1
+    scale(factor)
+  })
+
+  $container.append($img)
+
+  $box.append($container)
   return $box
+}
+
+/**
+ *
+ * @param {Element} el
+ * @param {(dx:number, dy:number) => void} move
+ */
+function drag(el, move) {
+  const $el = $(el)
+  let dragging = false
+  $el.mousedown(() => (dragging = true))
+  $el.mouseup(() => (dragging = false))
+  $el.mousemove((e) => dragging && move(e.movementX, e.movementY))
+}
+
+/**
+ *
+ * @param {Element} el
+ */
+function Scale(el) {
+  const $el = $(el)
+  const originSize = {
+    width: $el.width(),
+    height: $el.height()
+  }
+
+  return (factor) => {
+    if (originSize.width === undefined) {
+      originSize.width = $el.width()
+      originSize.height = $el.height()
+    }
+
+    $el.width(originSize.width * factor)
+    $el.height(originSize.height * factor)
+  }
 }

@@ -1767,45 +1767,23 @@
 	  }
 
 	  $(document.body).append($msg);
-	  $tool.show(); // setTimeout(() => {
-	  //   $msg.remove()
-	  // }, 1000)
+	  $tool.show();
 	}
 
 	function createFancyBox($img) {
-	  const $box = $('<div> </div>');
-	  $box.on('scroll', e => e.preventDefault());
-	  $box.on('wheel', e => e.preventDefault());
+	  const $box = $('<div class="z-fancy-box"> </div>'); // $box.on('scroll', (e) => e.preventDefault())
+	  // $box.on('wheel', (e) => e.preventDefault())
 
 	  const hideBox = () => {
 	    $box.hide();
 	    $box.remove();
 	  };
 
-	  $box.css({
-	    position: 'fixed',
-	    display: 'none',
-	    top: 0,
-	    left: 0,
-	    width: '100%',
-	    height: '100%',
-	    overflow: 'auto',
-	    backgroundColor: 'rgba(0, 0, 0, 0.5)',
-	    zIndex: 1000,
-	    cursor: 'zoom-out'
-	  });
-	  $box.click(e => e.currentTarget === e.target && hideBox());
-	  $($img).css({
-	    position: 'relative',
-	    top: '50%',
-	    transform: 'translateY(-50%)',
-	    margin: '0 auto',
-	    maxWidth: '80%',
-	    maxHeight: '80%',
-	    display: 'block',
-	    cursor: 'default'
-	  });
-	  $box.append($img);
+	  $box.click(e => e.target !== $img[0] && hideBox());
+	  $($img).addClass('z-fancy-img');
+	  const $container = $(`<div class="z-fancy-container"></div>`);
+	  $container.append($img);
+	  $box.append($container);
 	  return $box;
 	}
 
