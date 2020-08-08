@@ -1,7 +1,7 @@
 .simple-index
   each item in page.posts.data
     .card.article-excerpt
-      .title
+      a.pure.title(href=url_for(item.path))
         span.h1=item.title
         span.meta=item.date.format(config.date_format)
         if item.author
@@ -10,8 +10,7 @@
       .markdown-content
         !=item.excerpt || item.content
 
-      .excerpt-link(href=url_for(item.path))
-        //- a.text=__('home.excerpt_link')
+      .excerpt-link
         .tags
           include _partial/article-tags
 

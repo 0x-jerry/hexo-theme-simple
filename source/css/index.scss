@@ -1,5 +1,5 @@
 .simple-index {
-  padding-top: 30px;
+  padding-top: 10px;
   margin: 0 auto;
 
   .article-excerpt {
@@ -8,11 +8,13 @@
     padding: 20px 50px;
     margin-bottom: 20px;
     overflow: hidden;
-    cursor: pointer;
 
     .title {
       height: 2.5em;
+      display: block;
+
       @include text-ellipsis();
+      cursor: pointer;
 
       .h1 {
         font-size: 1.7em;
@@ -47,6 +49,29 @@
       border-top: 2px solid $color-primary;
     }
 
+    .title:hover {
+      .h1 {
+        color: $color-primary;
+      }
+
+      + .br {
+        animation: infinite hover 8s ease-in-out;
+
+        @keyframes hover {
+          0%,
+          50%,
+          100% {
+            width: 100%;
+          }
+
+          25%,
+          75% {
+            width: 70%;
+          }
+        }
+      }
+    }
+
     .more {
       text-align: center;
       color: $color-font-reverse;
@@ -54,11 +79,10 @@
 
     .excerpt-link {
       position: absolute;
-      top: 0;
-      left: 0;
+      bottom: 0;
+      right: 0;
       display: block;
       width: 100%;
-      height: 100%;
 
       &::before,
       &::after {

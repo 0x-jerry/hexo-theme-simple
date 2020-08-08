@@ -1,13 +1,19 @@
 .simple-post {
-  padding: 1px 50px 15px;
+  padding: 15px 50px;
   background: $color-background;
 
+  .title {
+    margin: 0;
+  }
+
   .post-meta {
+    margin: 10px 0 30px;
+
     .meta {
       margin-right: 5px;
+      margin-right: 3px;
       font-size: 0.8em;
       padding: 2px 3px;
-      margin-right: 3px;
       border-radius: 3px;
       background-color: $color-primary;
       color: $color-font-reverse;

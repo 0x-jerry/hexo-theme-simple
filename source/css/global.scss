@@ -40,6 +40,15 @@ a {
       width: 100%;
     }
   }
+
+  &.pure {
+    position: unset;
+
+    &::before,
+    &::after {
+      content: none;
+    }
+  }
 }
 
 html,
@@ -95,4 +104,5 @@ body {
 
 img {
   user-select: none;
+  -webkit-user-drag: none;
 }

@@ -40,11 +40,12 @@ body {
     height: $nav-height;
     overflow: hidden;
     background-color: $color-background;
+    transition: box-shadow 0.4s ease;
 
     z-index: 100;
 
     &.active {
-      box-shadow: 0 0 3px $color-primary;
+      box-shadow: 0 0 10px $color-primary;
     }
   }
 

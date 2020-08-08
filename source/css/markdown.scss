@@ -11,7 +11,7 @@
     max-width: 95%;
     margin: 5px auto;
     cursor: zoom-in;
-    box-shadow: 0 0 10px 0px $color-primary-light;
+    box-shadow: 0 0 2px 0px $color-primary-light;
   }
 
   h1,
@@ -131,6 +131,7 @@
 
       > pre > code {
         padding-left: 10px;
+        padding-right: 10px;
         border-radius: 0;
       }
     }
@@ -158,7 +159,6 @@
       position: absolute;
       top: 0;
       left: 0;
-      width: 100%;
       height: 100%;
       content: '';
       opacity: 0.8;
