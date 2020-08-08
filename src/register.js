@@ -67,7 +67,7 @@ async function registerSW() {
     return
   }
 
-  const worker = await navigator.serviceWorker.register('/sw.js')
+  const worker = await navigator.serviceWorker.register('/sw/index.js')
 
   worker.onupdatefound = (ev) => {
     $.message('检查到更新，请刷新重新访问', [
