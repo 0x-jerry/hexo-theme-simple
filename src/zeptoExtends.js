@@ -1,3 +1,5 @@
+const { max, set } = require('lodash')
+
 ;(($) => {
   $.fn.fancyImg = function () {
     this.each((index, ele) => {
@@ -105,6 +107,35 @@ function createFancyBox($img) {
   const unit = -0.001
   const scale = Scale($img)
 
+  const scaleWithOffset = (e, factor) => {
+    const target = $container[0]
+
+    const offset = {
+      x: e.clientX - target.offsetLeft,
+      y: e.clientY - target.offsetTop
+    }
+
+    const before = {
+      x: $container.scrollLeft() + offset.x,
+      y: $container.scrollTop() + offset.y
+    }
+
+    const scrollFactor = {
+      x: before.x / $img.width(),
+      y: before.y / $img.height()
+    }
+
+    scale(factor)
+
+    const scrollPos = {
+      x: $img.width() * scrollFactor.x - offset.x,
+      y: $img.height() * scrollFactor.y - offset.y
+    }
+
+    $container.scrollLeft(scrollPos.x)
+    $container.scrollTop(scrollPos.y)
+  }
+
   $container.on('wheel', (e) => {
     e.preventDefault()
     const raw = e.deltaY + e.deltaX
@@ -117,17 +148,32 @@ function createFancyBox($img) {
       factor = 1
     }
 
-    scale(factor)
+    scaleWithOffset(e, factor)
   })
 
-  $img.dblclick(() => {
-    factor = 1
-    scale(factor)
+  $container.dblclick((e) => {
+    if (factor !== 1) {
+      $img._oldFactor = factor
+    }
+
+    factor = factor === 1 ? $img._oldFactor : 1
+
+    scaleWithOffset(e, factor)
   })
 
   $container.append($img)
 
   $box.append($container)
+
+  // update image width & height;
+  setTimeout(() => {
+    const maxWidth = $container.width()
+    const oWidth = $img.width()
+
+    factor = maxWidth >= oWidth ? 1 : 1 - (oWidth - maxWidth) / oWidth
+
+    scale(factor)
+  }, 10)
   return $box
 }
 
@@ -150,15 +196,10 @@ function drag(el, move) {
  */
 function Scale(el) {
   const $el = $(el)
-  const originSize = {
-    width: $el.width(),
-    height: $el.height()
-  }
-
   return (factor) => {
-    if (originSize.width === undefined) {
-      originSize.width = $el.width()
-      originSize.height = $el.height()
+    const originSize = {
+      width: $el.prop('naturalWidth'),
+      height: $el.prop('naturalHeight')
     }
 
     $el.width(originSize.width * factor)
